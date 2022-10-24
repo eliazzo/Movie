@@ -73,10 +73,49 @@ function sortList() {
       plot: "A writer encounters the owner of an aging high-class hotel, who tells him of his early years serving as a lobby boy in the hotel's glorious years under an exceptional concierge.",
       cast: ["Ralph Fiennes", "F. Murray Abraham", "Mathieu Amalric"],
     },
-  };
+  }
 
+  /*document.getElementById("movie-name-list") This line is pointless after line 80 is introduced */
+  
+  const movieNameList = document.getElementById("movie-name-list")
+console.log(movieNameList)
+  const movieNames = Object.keys(movieData)
 
-document.getElementById("abc").innerHTML = "The Grand Budapest Hotel"
+  for (let i = 0; i < movieNames.length; i++){
+    const listItem = document.createElement("li") 
+    listItem.textContent = movieNames[i]
+    movieNameList.appendChild(listItem)
+  }
+
+  // querySelectorAll(".movie-list-item")
+  // querySelector     
+  //let listItem = document.querySelector("li");
+  //let listItems = document.querySelectorAll("li");
+  //console.log(listItem);
+  //console.log(listItems);
+ 
+ /* for (let filmYear in movieData.year) {
+   console.log(`${filmYear} : ${movieData.year[filmYear].year}`)
+}
+
+function getFilmData () {
+    console.log(year)
+}
+Object.defineProperty(movieData, 'year')
+
+getFilmData()
+ 
+
+/*is not doing anything
+function displayAbc(){
+document.getElementById("abc").innerHTML = movieData.year
+}
+
+movieData.year = displayAbc
+movieData.year()
+
+let filmYear = movieData.year
+document.getElementById("abc").innerHTML = filmYear */
 
 
 
