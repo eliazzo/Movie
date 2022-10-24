@@ -1,0 +1,30 @@
+h1{
+    text-align: center;
+    font-family: impact;
+    font-size: 100px;
+    letter-spacing: 9px;
+    color: yellowgreen
+
+}
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+}
+
+.list{
+    font-family: tahoma;
+    letter-spacing: 2px;
+    color:rgb(64, 62, 62);
+}
+
+button{
+    background-color: yellowgreen;
+    border: none;
+    height: 100px;
+    width: 100px;
+    letter-spacing: 20px;
+    color:rgb(64, 62, 62);
+}

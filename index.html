@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <script src = "movie.js"></script>
+        <link rel = "stylesheet" href="movie.css">
+    </head>
+    <body>
+        <h1>Movie Data</h1>
+
+        <div class = "gallery">
+            <img id ="Darjeeling" onmouseover = 'setNewImage()' onmouseout = 'setOldImage()' src = "Darjeeling limited.jpg" width="300">
+            <img id="Royal" src = "Royal Tenenbaums.jpg" width="300">
+            <img id ="Fox" src = "Mr Fox.jpg" width="300">
+            <img id ="Grand" src = "Grand budapest.jpg" width="300">
+        </div>
+
+
+        <div class = "list">
+                <p>Click the button to sort the list alphabetically:</p>
+                <button onclick="sortList()">Sort</button>
+                <ul id="id01">
+                    <li>The Darjeeling Limited</li>
+                    <li>The Royal Tenenbaums</li>
+                    <li>Fantastic Mr. Fox</li>
+                    <li>The Grand Budapest Hotel</li>
+                 </ul>
+        </div>
+
+        <!--trying to display movieData object on page
+        <p>Display film release</p>
+        <p id ="abc"></p>
+        -->
+
+    </body>
+</html>
