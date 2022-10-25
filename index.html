@@ -7,24 +7,49 @@
     <body>
         <h1>Movie Data</h1>
 
-        <!--<div class = "gallery">
-            <img id ="Darjeeling" onmouseover = 'setNewImage()' onmouseout = 'setOldImage()' src = "Darjeeling limited.jpg" width="300">
-            <img id="Royal" src = "Royal Tenenbaums.jpg" width="300">
+        <div class = "list">
+            <!---<p>Click the button to sort the list alphabetically:</p>
+             <button onclick="sortList()">Sort</button> -->
+             <ul id="movie-name-list">
+             </ul>
+     </div>
+
+        <div class = "gallery">
+            <img id ="Darjeeling" src = "Darjeeling limited.jpg" width="300" onmouseover = 'setNewImage()' onmouseout = 'setOldImage()'>
+            <img id="Royal" src = "Royal Tenenbaums.jpg" width="300" onclick = 'RoyalImage()'>
             <img id ="Fox" src = "Mr Fox.jpg" width="300">
             <img id ="Grand" src = "Grand budapest.jpg" width="300">
-        </div>-->
-
-
-        <div class = "list">
-                <p>Click the button to sort the list alphabetically:</p>
-                <button onclick="sortList()">Sort</button>
-                <ul id="movie-name-list">
-                </ul>
         </div>
 
-        <!--trying to display movieData object on page-->
+
         
-        <!--<p id ="Abc" onclick = "filmYear">hello</p>-->
+
+        <div class = "list">
+            <ul id ="movie-year-list">
+            </ul>
+        </div>
+
+       
+
+        <h3>Click on the buttons to see when the film was re</h3>
+        <button id = "darjeeling-year">The Darjeeling Limited</button>
+        <button id = "royal-plot">The Royal Tenenbaums</button>
+        <button id = "fox-plot">Fantastic Mr. Fox</button>
+        <button id = "budapest-plot">The Grand Budapest Hotel</button>
+
+        <div class = "plot">
+            <h2>XYZ<p id = "demo"></p></h2>
+        </div>
+
+        <p id = "demo1"></p>
+        <p id = "demo2"></p>
+        <p id = "demo3"></p>
+        <p id = "demo4"></p>
+        <p id = "demo5"></p>
+        <p id = "demo 6"></p>
+
+        
+
         
 
     </body>

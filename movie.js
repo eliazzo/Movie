@@ -1,45 +1,6 @@
-function setNewImage(){
-    document.getElementById("Darjeeling").src = "Wes Anderson.jpg"
-    }
+//Object
 
-function setOldImage(){ 
-    document.getElementById("Darjeeling").src = "Darjeeling limited.jpg"
-}
-
-function sortList() {
-    var list, i, switching, b, shouldSwitch;
-    list = document.getElementById("id01");
-    switching = true;
-    /* Make a loop that will continue until
-    no switching has been done: */
-    while (switching) {
-      // Start by saying: no switching is done:
-      switching = false;
-      b = list.getElementsByTagName("LI");
-      // Loop through all list items:
-      for (i = 0; i < (b.length - 1); i++) {
-        // Start by saying there should be no switching:
-        shouldSwitch = false;
-        /* Check if the next item should
-        switch place with the current item: */
-        if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
-          /* If next item is alphabetically lower than current item,
-          mark as a switch and break the loop: */
-          shouldSwitch = true;
-          break;
-        }
-      }
-      if (shouldSwitch) {
-        /* If a switch has been marked, make the switch
-        and mark the switch as done: */
-        b[i].parentNode.insertBefore(b[i + 1], b[i]);
-        switching = true;
-      }
-    }
-  }
-
-
-  let movieData = {
+let movieData = {
     "The Darjeeling Limited": {
       plot: "A year after their father's funeral, three brothers travel across India by train in an attempt to bond with each other.",
       cast: ["Jason Schwartzman", "Owen Wilson", "Adrien Brody"],
@@ -75,11 +36,12 @@ function sortList() {
     },
   }
 
-  /*document.getElementById("movie-name-list") This line is pointless after line 80 is introduced */
+
+  //Transferring object data (movie names) to html list
   
   const movieNameList = document.getElementById("movie-name-list")
-console.log(movieNameList)
   const movieNames = Object.keys(movieData)
+
 
   for (let i = 0; i < movieNames.length; i++){
     const listItem = document.createElement("li") 
@@ -87,35 +49,67 @@ console.log(movieNameList)
     movieNameList.appendChild(listItem)
   }
 
-  // querySelectorAll(".movie-list-item")
-  // querySelector     
-  //let listItem = document.querySelector("li");
-  //let listItems = document.querySelectorAll("li");
-  //console.log(listItem);
-  //console.log(listItems);
+  //Buttons
+
+  const DarjeelingButton = document.getElementById('darjeeling-year')
+      DarjeelingButton.addEventListener("click", function(){
+      document.getElementById('darjeeling-year').innerText = movieData["The Darjeeling Limited"].year
+      })
+  
+
+  
+
+/*Transfering movie years to html NOT WORKING
+
+  const movieYearList = document.getElementById("movie-year-list")
+  const movieYears = Object.keys(movieData)
  
- /* for (let filmYear in movieData.year) {
-   console.log(`${filmYear} : ${movieData.year[filmYear].year}`)
+  for (let i = 0; i < movieYears.length; i++){
+    const listItem1 = document.createElement("li1")
+    listItem1.textContent = movieYears[i]
+    movieYearList.appendChild(listItem1)
+  }*/
+
+
+
+  const theRoyalTenenbaums = {
+    plot: "The eccentric members of a dysfunctional family reluctantly gather under the same roof for various reasons",
+      rating: 7.6,
+      year: 2001,
+      cast: ["Gene Hackman", "Gwnyeth Paltrow", "Anjelica Huston"],
+      runtime: 170,
+  }
+
+  document.getElementById("demo2").innerHTML = Object.values(theRoyalTenenbaums)
+
+  document.getElementById("demo3").innerHTML = Object.keys(theRoyalTenenbaums)
+
+  document.getElementById("demo4").innerHTML = Object.entries(theRoyalTenenbaums)
+  console.log(document.getElementById("demo4"))
+
+    //
+    document.getElementById("demo").innerHTML = movieData["The Darjeeling Limited"].plot
+    console.log(document.getElementById("demo").innerHTML)
+
+    document.getElementById("demo1").innerHTML = movieData["The Darjeeling Limited"]
+    console.log(document.getElementById("demo1").innerHTML)
+
+
+
+
+
+
+
+//Wes Anderson image change on mouse over
+
+function setNewImage(){
+  document.getElementById("Darjeeling").src = "Wes Anderson.jpg"
+   }
+
+function setOldImage(){ 
+   document.getElementById("Darjeeling").src = "Darjeeling limited.jpg"
 }
 
-function getFilmData () {
-    console.log(year)
-}
-Object.defineProperty(movieData, 'year')
-
-getFilmData()
- 
-
-/*is not doing anything
-function displayAbc(){
-document.getElementById("abc").innerHTML = movieData.year
-}
-
-movieData.year = displayAbc
-movieData.year()
-
-let filmYear = movieData.year
-document.getElementById("abc").innerHTML = filmYear */
 
 
 

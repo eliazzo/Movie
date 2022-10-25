@@ -24,7 +24,7 @@ button{
     background-color: yellowgreen;
     border: none;
     height: 100px;
-    width: 100px;
-    letter-spacing: 20px;
+    width: 200px;
+    letter-spacing: 10px;
     color:rgb(64, 62, 62);
 }
