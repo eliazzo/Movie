@@ -49,17 +49,30 @@ let movieData = {
     movieNameList.appendChild(listItem)
   }
 
-  //Buttons
+  //Buttons to reveal year
 
   const DarjeelingButton = document.getElementById('darjeeling-year')
       DarjeelingButton.addEventListener("click", function(){
       document.getElementById('darjeeling-year').innerText = movieData["The Darjeeling Limited"].year
       })
+
+  const RoyalButton = document.getElementById('royal-year')
+      RoyalButton.addEventListener("click", function(){
+        document.getElementById('royal-year').innerText = movieData["The Royal Tenenbaums"].year
+      })
+
+  const foxButton = document.getElementById('fox-year')
+      foxButton.addEventListener("click", function(){
+        document.getElementById('fox-year').innerText = movieData["Fantastic Mr. Fox"].year
+      })
+  
+  const budapestButton = document.getElementById('budapest-year')
+      budapestButton.addEventListener("click", function(){
+        document.getElementById('budapest-year').innerText = movieData["The Grand Budapest Hotel"].year
+      })
   
 
-  
-
-/*Transfering movie years to html NOT WORKING
+/*Transfering movie years to html list in the same way as movie names ***NOT WORKING
 
   const movieYearList = document.getElementById("movie-year-list")
   const movieYears = Object.keys(movieData)
@@ -71,7 +84,7 @@ let movieData = {
   }*/
 
 
-
+//Separating the Royal Tenenbaums into a new object
   const theRoyalTenenbaums = {
     plot: "The eccentric members of a dysfunctional family reluctantly gather under the same roof for various reasons",
       rating: 7.6,
@@ -87,7 +100,8 @@ let movieData = {
   document.getElementById("demo4").innerHTML = Object.entries(theRoyalTenenbaums)
   console.log(document.getElementById("demo4"))
 
-    //
+    // Working again with the entire movieData object
+
     document.getElementById("demo").innerHTML = movieData["The Darjeeling Limited"].plot
     console.log(document.getElementById("demo").innerHTML)
 
@@ -95,8 +109,11 @@ let movieData = {
     console.log(document.getElementById("demo1").innerHTML)
 
 
-
-
+/* Mouse over image to reveal plot NOT WORKING ****
+  const revealPlot = document.getElementById("Royal").src
+  revealPlot.addEventListener('click', function(){
+    document.getElementById("Royal").src.innerText = "hello"
+  }) */
 
 
 
