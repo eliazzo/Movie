@@ -1,23 +1,45 @@
+head{
+    background-color: greenyellow;
+}
+
 h1{
     text-align: center;
     font-family: impact;
-    font-size: 100px;
     letter-spacing: 9px;
-    color: yellowgreen
+    color: yellowgreen;
+    font-size: 200px;
 
 }
 
+body{
+    color: rgb(201, 170, 230);
+    font-family: Cambria;
+    letter-spacing: 1px;
+}
+
 .gallery{
+    border: solid black 1px;
     display: flex;
     flex-direction: row;
     gap: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 2px;
+    color: rgb(64, 62, 62);
 
 }
 
 .list{
+    border: solid black 1px;
     font-family: tahoma;
+    font-size: 10px;
     letter-spacing: 2px;
-    color:rgb(64, 62, 62);
+    color:white;
+    background-color: rgb(255, 162, 0);
+
+}
+
+.buttons{
+    border: solid black 1px;
 }
 
 button{
@@ -28,3 +50,12 @@ button{
     letter-spacing: 10px;
     color:rgb(64, 62, 62);
 }
+
+form{
+    border: solid black 1px;
+    font-family: tahoma;
+    color: orange;
+    letter-spacing: 2px;
+
+}
+
