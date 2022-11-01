@@ -57,22 +57,10 @@ let movieData = {
 
   for (let i in movieData){movieData[i].plot}
 
-  /*for (let i = 0; i < movieDataArray.length; i++){
-    const listData = document.createElement("li")
-    listData.textContent = movieDataArray [i]
-    movieDataArrayList.appendChild(listData)*/
   
-
-
   let movieDataArrayPrint = movieDataArray.forEach(function(printMovieInfo){
     console.log(printMovieInfo)
   }) //Prints the data of each movie individually (separated by movie)
-  
-  
-    
-    
-  
-    
   
 
   //Transferring object data (movie names) to html list
@@ -107,53 +95,43 @@ let movieData = {
     const listItem = document.createElement("li")
     listItem.textContent = movieCast[i]
     movieCastList.appendChild(listItem)
-  }
+  } 
  
 
-  //Buttons to reveal year
-
-  
+  //Buttons to reveal year "click" and cast "dblclick"
 
   const DarjeelingButton = document.getElementById('darjeeling-year')
       DarjeelingButton.addEventListener("click", function(){
       document.getElementById('darjeeling-year').innerText = movieData["The Darjeeling Limited"].year
       })
-      
-         /* const darjeelingMouseover = document.getElementById("darjeeling-year")
-              darjeelingMouseover.addEventListener("mouseover", function(){
-                document.getElementById("darjeeling-year").innerText = movieData["The Darjeeling Limited"].rating
-              }) */
+      DarjeelingButton.addEventListener("dblclick", function(){
+      document.getElementById('darjeeling-year').innerText = movieData["The Darjeeling Limited"].cast
+      })
 
   const RoyalButton = document.getElementById('royal-year')
       RoyalButton.addEventListener("click", function(){
         document.getElementById('royal-year').innerText = movieData["The Royal Tenenbaums"].year
       })
-
-        /*  const royalMouseover= document.getElementById('royal-year')
-              royalMouseover.addEventListener("mouseover", function(){
-                document.getElementById('royal-year').innerText = movieData["The Royal Tenenbaums"].rating
-              }) */
+      RoyalButton.addEventListener("dblclick", function(){
+        document.getElementById('royal-year').innerText = movieData["The Royal Tenenbaums"].cast
+      })
 
   const foxButton = document.getElementById('fox-year')
       foxButton.addEventListener("click", function(){
         document.getElementById('fox-year').innerText = movieData["Fantastic Mr. Fox"].year
       })
-
-        /*  const foxMouseover = document.getElementById('fox-year')
-          foxMouseover.addEventListener("mouseover", function(){
-              document.getElementById('fox-year').innerText = movieData["Fantastic Mr. Fox"].rating
-           }) */
-  
+      foxButton.addEventListener("dblclick", function(){
+        document.getElementById('fox-year').innerText = movieData["Fantastic Mr. Fox"].cast
+      })
+      
   const budapestButton = document.getElementById('budapest-year')
       budapestButton.addEventListener("click", function(){
         document.getElementById('budapest-year').innerText = movieData["The Grand Budapest Hotel"].year
       })
+      budapestButton.addEventListener("dblclick", function(){
+        document.getElementById('budapest-year').innerText = movieData["The Grand Budapest Hotel"].cast
+      })
 
-        /*   const budapestMouseover = document.getElementById('budapest-year')
-           budapestMouseover.addEventListener("mouseover", function(){
-                document.getElementById('budapest-year').innerText = movieData["The Grand Budapest Hotel"].rating
-          }) */
-  
 // END
 
 
@@ -209,19 +187,5 @@ let movieData = {
 
 //END
 
-/*Wes Anderson image change on mouse over
 
-function setNewImage(){
-  document.getElementById("Darjeeling").src = "darjeeling cast.jpg"
-   }
-
-function setOldImage(){ 
-   document.getElementById("Darjeeling").src = "Darjeeling limited.jpg"
-}
-
-function setNewText(){
-  const TenenbaumsRating = movieData["The Royal Tenenbaums"].rating
-  document.getElementById("royal-plot").innerHTML = TenenbaumsRating 
-}
-//END*/
 
