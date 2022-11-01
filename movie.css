@@ -1,5 +1,8 @@
 body{
     background-color: rgb(244, 244, 237);
+    color: rgb(201, 170, 230);
+    font-family: cambria;
+    letter-spacing: 1px;
 }
 
 h1{
@@ -8,14 +11,14 @@ h1{
     letter-spacing: 9px;
     color: yellowgreen;
     font-size: 100px;
-
 }
 
-body{
-    color: rgb(201, 170, 230);
-    font-family: cambria;
-    letter-spacing: 1px;
+h2{
+    text-align: center;
+    color: rgb(64, 62, 62);
+    font-size: 100%;
 }
+
 
 .gallery{
     display: flex;
@@ -47,12 +50,12 @@ border: black 1px solid;
 
 }
 
-.fox-image{
+.wrapper{
     position: relative;
     display: inline-block
 
 }
-.fox-image:hover .text-box{
+.wrapper:hover .text-box{
     position: absolute;
     text-align: center;
     z-index: 1;

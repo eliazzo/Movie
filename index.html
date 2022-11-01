@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en">
     <head>
+        <meta charset="UTF-8">
         <script src = "movie.js" defer></script> <!--or async/ move to bottom of body-->
         <link rel = "stylesheet" href="movie.css">
         <h1>Movie Data</h1>
@@ -15,21 +16,27 @@
 
         
 
+    <h2>Hover over the movie to see the plot</h2>
+     <div class = "gallery">
 
-        <div class = "gallery">
+        <div class="wrapper">
+            <div class="darjeeling-image">
+                <img id ="Darjeeling" src = "Darjeeling limited.jpg" width="300">
+                    <div id="text-box" class="text-box">
+                        <p id = "darjeeling-plot"></p>
+                    </div>
+            </div> 
+        </div>
 
-            <div>
-                <img id ="Darjeeling" src = "Darjeeling limited.jpg" width="300" onmouseover = 'setNewImage()' onmouseout = 'setOldImage()'>
-            </div>
 
-            <div id="text-box">
-                <p id = "darjeeling-plot"></p>
-            </div>
-
-            <div>
+        <div class="wrapper">
+            <div class="royal-image">
                 <img id="Royal" src = "Royal Tenenbaums.jpg" width="300" >
-                <p id = "royal-plot" onclick="setNewText()"></p>
+                    <div id="text-box" class="text-box">
+                         <p id = "royal-plot"></p>
+                    </div>
             </div>
+        </div>
 
 
         <div class ="wrapper">
@@ -41,6 +48,7 @@
             </div>
         </div>
 
+
         <div class ="wrapper">
             <div class="grand-image">
                 <img id ="Grand" src = "Grand budapest.jpg" width="300">
@@ -51,7 +59,7 @@
         </div>
 
 
-        </div>
+     </div>
 
         <div class="buttons">
             <h3>Click the green buttons to see the film's year of release</h3>

@@ -112,6 +112,8 @@ let movieData = {
 
   //Buttons to reveal year
 
+  
+
   const DarjeelingButton = document.getElementById('darjeeling-year')
       DarjeelingButton.addEventListener("click", function(){
       document.getElementById('darjeeling-year').innerText = movieData["The Darjeeling Limited"].year
@@ -152,7 +154,7 @@ let movieData = {
                 document.getElementById('budapest-year').innerText = movieData["The Grand Budapest Hotel"].rating
           }) */
   
-
+// END
 
 
 
@@ -187,7 +189,7 @@ let movieData = {
     document.getElementById("fox-plot").innerHTML = movieData["Fantastic Mr. Fox"].plot
     document.getElementById("budapest-plot").innerHTML = movieData["The Grand Budapest Hotel"].plot
 
-    //
+// END
 
 
 // Form 
@@ -207,7 +209,7 @@ let movieData = {
 
 //END
 
-//Wes Anderson image change on mouse over
+/*Wes Anderson image change on mouse over
 
 function setNewImage(){
   document.getElementById("Darjeeling").src = "darjeeling cast.jpg"
@@ -221,5 +223,5 @@ function setNewText(){
   const TenenbaumsRating = movieData["The Royal Tenenbaums"].rating
   document.getElementById("royal-plot").innerHTML = TenenbaumsRating 
 }
-//END
+//END*/
 
