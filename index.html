@@ -13,28 +13,43 @@
              </ul>
         </div>
 
+        
+
 
         <div class = "gallery">
 
             <div>
-                <img id ="Darjeeling" src = "Darjeeling limited.jpg" width="300" onclick = 'setNewImage()' ondblclick = 'setOldImage()'>
+                <img id ="Darjeeling" src = "Darjeeling limited.jpg" width="300" onmouseover = 'setNewImage()' onmouseout = 'setOldImage()'>
+            </div>
+
+            <div id="text-box">
                 <p id = "darjeeling-plot"></p>
             </div>
 
             <div>
-                <img id="Royal" src = "Royal Tenenbaums.jpg" width="300" onclick = 'setNewImage()'>
-                <p id = "royal-plot"></p>
+                <img id="Royal" src = "Royal Tenenbaums.jpg" width="300" >
+                <p id = "royal-plot" onclick="setNewText()"></p>
             </div>
 
-            <div>
-                <img id ="Fox" src = "Mr Fox.jpg" width="300">
-                <p id = "fox-plot"></p>
-            </div>
 
-            <div>
+        <div class ="wrapper">
+            <div class="fox-image">
+                <img id ="fox" class="fox" src = "Mr Fox.jpg" alt="Mr Fox" width="300">
+                    <div id="text-box" class="text-box">
+                        <p id = "fox-plot"></p>
+                    </div>
+            </div>
+        </div>
+
+        <div class ="wrapper">
+            <div class="grand-image">
                 <img id ="Grand" src = "Grand budapest.jpg" width="300">
-                <p id = "budapest-plot"></p>
+                    <div id="text-box" class="text-box">
+                        <p id = "budapest-plot"></p>
+                    </div>
             </div>
+        </div>
+
 
         </div>
 

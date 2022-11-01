@@ -158,7 +158,7 @@ let movieData = {
 
 //Separating the Royal Tenenbaums into a new object
 
-  const theRoyalTenenbaums = {
+ const theRoyalTenenbaums = {
     plot: "The eccentric members of a dysfunctional family reluctantly gather under the same roof for various reasons",
       rating: 7.6,
       year: 2001,
@@ -171,6 +171,9 @@ let movieData = {
   document.getElementById("demo3").innerHTML = Object.keys(theRoyalTenenbaums)
 
   document.getElementById("demo4").innerHTML = Object.entries(theRoyalTenenbaums)
+
+
+ //END
   
 
 
@@ -187,34 +190,13 @@ let movieData = {
     //
 
 
-/* Form 
-let movies = []
-    const addMovie = (ev)=>{
-      ev.preventDefault()
-      let movie = {
-        id: Date.now(),
-        title: document.getElementById("title").value,
-        rating: document.getElementById("rating").value
+// Form 
 
-      }
-     }
 
-     movies.push(movie)
-     document.querySelector("form").reset 
-
-     console.warn('added', {movies})
-
-    document.getElementById("btn").addEventListener('click', addMovie)*/
+// END
 
 
 
-
-
-
-
-
-
-  
   
 //List of ratings
   
@@ -235,10 +217,9 @@ function setOldImage(){
    document.getElementById("Darjeeling").src = "Darjeeling limited.jpg"
 }
 
-/*function setNewImage(){
-  document.getElementById("Royal").src = "Royal tenenbaums cast.jpg"
-}*/
+function setNewText(){
+  const TenenbaumsRating = movieData["The Royal Tenenbaums"].rating
+  document.getElementById("royal-plot").innerHTML = TenenbaumsRating 
+}
 //END
-
-
 

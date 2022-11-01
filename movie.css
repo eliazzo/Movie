@@ -1,10 +1,10 @@
 body{
-    background-color: beige;
+    background-color: rgb(244, 244, 237);
 }
 
 h1{
     text-align: center;
-    font-family: impact;
+    font-family: 'Times New Roman';
     letter-spacing: 9px;
     color: yellowgreen;
     font-size: 100px;
@@ -13,7 +13,7 @@ h1{
 
 body{
     color: rgb(201, 170, 230);
-    font-family: Cambria;
+    font-family: cambria;
     letter-spacing: 1px;
 }
 
@@ -34,6 +34,29 @@ body{
     justify-content: center;
 }
 
+.text-box{
+    position: absolute;
+    top: 150px;
+    background: red;
+    z-index: -1;
+
+}
+
+.wrapper:hover{
+border: black 1px solid;
+
+}
+
+.fox-image{
+    position: relative;
+    display: inline-block
+
+}
+.fox-image:hover .text-box{
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+}
 
 .gallery p{
     width: 300px;
@@ -48,7 +71,7 @@ body{
     text-align: center;
     height: auto;
     width: auto;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: impact;
     font-size: 25px;
     letter-spacing: 2px;
     color:rgb(201, 170, 230);
@@ -58,7 +81,6 @@ body{
 .buttons{
     display: flex;
     flex-direction: column;
-    border: solid black 1px;
     align-items: center;
     text-align: center;
 
@@ -70,8 +92,9 @@ button{
     border-color: red;
     height: 100px;
     width: 200px;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     color:rgb(64, 62, 62);
+    margin-top: 5px;
 }
 
 form{
