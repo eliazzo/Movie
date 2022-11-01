@@ -8,20 +8,21 @@
 
     <body>
 
-        <div class = "list">
+        <div class = "name-list">
              <ul id="movie-name-list" style="list-style: none;">
              </ul>
         </div>
 
+
         <div class = "gallery">
 
             <div>
-                <img id ="Darjeeling" src = "Darjeeling limited.jpg" width="300" onmouseover = 'setNewImage()' onmouseout = 'setOldImage()'>
+                <img id ="Darjeeling" src = "Darjeeling limited.jpg" width="300" onclick = 'setNewImage()' ondblclick = 'setOldImage()'>
                 <p id = "darjeeling-plot"></p>
             </div>
 
             <div>
-                <img id="Royal" src = "Royal Tenenbaums.jpg" width="300">
+                <img id="Royal" src = "Royal Tenenbaums.jpg" width="300" onclick = 'setNewImage()'>
                 <p id = "royal-plot"></p>
             </div>
 
@@ -37,28 +38,36 @@
 
         </div>
 
-         <div class = "list">
-            <ul id ="movie-cast-list"  style="list-style: none;">
-            </ul>
-        </div> 
-
-        <div class = buttons>
-            <h3>Hover over the green buttons to see the film's rating and click to see year of release</h3>
+        <div class="buttons">
+            <h3>Click the green buttons to see the film's year of release</h3>
                 <button id = "darjeeling-year">The Darjeeling Limited</button>
                 <button id = "royal-year">The Royal Tenenbaums</button>
                 <button id = "fox-year">Fantastic Mr. Fox</button>
                 <button id = "budapest-year">The Grand Budapest Hotel</button>
         </div>
 
-       
+         <div class = "list">
+            <h2>Cast</h2>
+            <ul id ="movie-cast-list"  style="list-style: none;">
+            </ul>
+        </div> 
 
+        <div class = "list">
+            <ul id="movie-info">
+            </ul>
+        </div>
+
+       
+        
+
+
+    <div>
         
         <p id = "demo2"></p>
         <p id = "demo3"></p>
         <p id = "demo4"></p>
-        <p id = "demo5"></p>
-        <p id = "demo 6"></p>
-
+    
+    </div>
 
         
 

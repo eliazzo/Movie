@@ -1,5 +1,5 @@
-head{
-    background-color: greenyellow;
+body{
+    background-color: beige;
 }
 
 h1{
@@ -7,7 +7,7 @@ h1{
     font-family: impact;
     letter-spacing: 9px;
     color: yellowgreen;
-    font-size: 200px;
+    font-size: 100px;
 
 }
 
@@ -18,9 +18,10 @@ body{
 }
 
 .gallery{
-    border: solid black 1px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 2px;
@@ -28,23 +29,45 @@ body{
 
 }
 
-.list{
-    border: solid black 1px;
-    font-family: tahoma;
-    font-size: 10px;
+.gallery img{
+    display: flex;
+    justify-content: center;
+}
+
+
+.gallery p{
+    width: 300px;
+
+}
+
+#cast:hover{
+    background-color: yellow;
+}
+
+.name-list{
+    text-align: center;
+    height: auto;
+    width: auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
     letter-spacing: 2px;
-    color:white;
-    background-color: rgb(255, 162, 0);
+    color:rgb(201, 170, 230);
 
 }
 
 .buttons{
+    display: flex;
+    flex-direction: column;
     border: solid black 1px;
+    align-items: center;
+    text-align: center;
+
 }
 
 button{
     background-color: yellowgreen;
-    border: none;
+    border: 10px;
+    border-color: red;
     height: 100px;
     width: 200px;
     letter-spacing: 10px;
