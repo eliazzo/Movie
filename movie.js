@@ -60,8 +60,11 @@ let movieData = {
   
   let movieDataArrayPrint = movieDataArray.forEach(function(printMovieInfo){
     console.log(printMovieInfo)
+
+
   }) //Prints the data of each movie individually (separated by movie)
   
+
 
   //Transferring object data (movie names) to html list
   
@@ -77,13 +80,18 @@ let movieData = {
   }
 
 
+// Movie names
 
-  /*for (let i = 0; i < movieInfo.length; i++){
-    const listItem = document.createElement("li")
-    listItem.textContent = movieInfo[i]
-    movieInfoList.appendChild(listItem)
-  } */
+let darjeelingNameHolder = document.getElementById("darjeeling-name"); // selects the p "darjeeling-name" element
+let darjeelingName = Object.keys(movieData)[0]; // selects "the Darjeeling Limited" from the Object.keys(movieData) array
+console.log(darjeelingName);
+darjeelingNameHolder.innerText = darjeelingName; // sets the inner text of the p "darjeeling-name" element to the darjeelingName variable
 
+document.getElementById("royal-name").innerHTML = Object.keys(movieData)[1];
+
+document.getElementById("fox-name").innerText = Object.keys(movieData)[2];
+
+document.getElementById("budapest-name").innerText = Object.keys(movieData)[3];
 
   //Transfering object data (movie cast) to html list  **************** working but I don't know how to create this using Object. ***************************
 
@@ -97,6 +105,23 @@ let movieData = {
     movieCastList.appendChild(listItem)
   } 
  
+
+  // Working with the movieData object - plot text and movie rating on image hover
+
+  document.getElementById("darjeeling-plot").innerHTML = movieData["The Darjeeling Limited"].plot
+  document.getElementById("royal-plot").innerHTML = movieData["The Royal Tenenbaums"].plot
+  document.getElementById("fox-plot").innerHTML = movieData["Fantastic Mr. Fox"].plot
+  document.getElementById("budapest-plot").innerHTML = movieData["The Grand Budapest Hotel"].plot
+
+  
+  document.getElementById("darjeeling-rating").innerHTML = movieData["The Darjeeling Limited"].rating;
+  document.getElementById("royal-rating").innerHTML = movieData["The Royal Tenenbaums"].rating;
+  document.getElementById("fantastic-rating").innerHTML = movieData["Fantastic Mr. Fox"].rating;
+  document.getElementById("budapest-rating").innerHTML = movieData["The Grand Budapest Hotel"].rating;
+
+//END
+
+
 
   //Buttons to reveal year "click" and cast "dblclick"
 
@@ -136,56 +161,12 @@ let movieData = {
 
 
 
-//Separating the Royal Tenenbaums into a new object
-
- const theRoyalTenenbaums = {
-    plot: "The eccentric members of a dysfunctional family reluctantly gather under the same roof for various reasons",
-      rating: 7.6,
-      year: 2001,
-      cast: ["Gene Hackman", "Gwnyeth Paltrow", "Anjelica Huston"],
-      runtime: 170,
-  }
-
-  document.getElementById("demo2").innerHTML = Object.values(theRoyalTenenbaums)
-
-  document.getElementById("demo3").innerHTML = Object.keys(theRoyalTenenbaums)
-
-  document.getElementById("demo4").innerHTML = Object.entries(theRoyalTenenbaums)
 
 
- //END
-  
-
-
-
-
-
-// Working with the movieData object - plot text under image
-
-    document.getElementById("darjeeling-plot").innerHTML = movieData["The Darjeeling Limited"].plot
-    document.getElementById("royal-plot").innerHTML = movieData["The Royal Tenenbaums"].plot
-    document.getElementById("fox-plot").innerHTML = movieData["Fantastic Mr. Fox"].plot
-    document.getElementById("budapest-plot").innerHTML = movieData["The Grand Budapest Hotel"].plot
-
-// END
-
-
-// Form 
-
-
-// END
 
 
 
   
-//List of ratings
-  
-  document.getElementById("darjeeling-rating").innerHTML = movieData["The Darjeeling Limited"].rating
-  document.getElementById("royal-rating").innerHTML = movieData["The Royal Tenenbaums"].rating
-  document.getElementById("fantastic-rating").innerHTML = movieData["Fantastic Mr. Fox"].rating
-  document.getElementById("budapest-rating").innerHTML = movieData["The Grand Budapest Hotel"].rating
-
-//END
 
 
 

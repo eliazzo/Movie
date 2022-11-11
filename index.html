@@ -2,12 +2,17 @@
 <html lang = "en">
     <head>
         <meta charset="UTF-8">
-        <script src = "movie.js" defer></script> <!--or async/ move to bottom of body-->
+        <script src = "movie.js" defer></script> <!--loads html before applying js-->
         <link rel = "stylesheet" href="movie.css">
-        <h1>Movie Data</h1>
     </head>
 
     <body>
+
+        <div id="title">
+            <h1>Movie Data</h1>
+        </div>
+
+        <p id="test"></p>
 
         <div class = "name-list">
              <ul id="movie-name-list" style="list-style: none;">
@@ -15,15 +20,20 @@
         </div>
 
         
-
-    <h2>Hover over the movie to see the plot</h2>
+        <div id="gallery-title">
+            <h2>Hover over the movie to see it's name, plot and rating</h2>
+        </div>
+     
      <div class = "gallery">
+
 
         <div class="wrapper">
             <div class="darjeeling-image">
                 <img id ="Darjeeling" src = "Darjeeling limited.jpg" width="300">
                     <div id="text-box" class="text-box">
+                        <p id="darjeeling-name"></p>
                         <p id = "darjeeling-plot"></p>
+                        <p id="darjeeling-rating"></p>
                     </div>
             </div> 
         </div>
@@ -33,7 +43,9 @@
             <div class="royal-image">
                 <img id="Royal" src = "Royal Tenenbaums.jpg" width="300" >
                     <div id="text-box" class="text-box">
+                        <p id="royal-name"></p>
                          <p id = "royal-plot"></p>
+                         <p id="royal-rating"></p>
                     </div>
             </div>
         </div>
@@ -43,7 +55,9 @@
             <div class="fox-image">
                 <img id ="fox" class="fox" src = "Mr Fox.jpg" alt="Mr Fox" width="300">
                     <div id="text-box" class="text-box">
+                        <p id="fox-name"></p>
                         <p id = "fox-plot"></p>
+                        <p id="fantastic-rating"></p>
                     </div>
             </div>
         </div>
@@ -53,7 +67,9 @@
             <div class="grand-image">
                 <img id ="Grand" src = "Grand budapest.jpg" width="300">
                     <div id="text-box" class="text-box">
+                        <p id="budapest-name"></p>
                         <p id = "budapest-plot"></p>
+                        <p id="budapest-rating"></p>
                     </div>
             </div>
         </div>
@@ -84,15 +100,6 @@
     </div>
 
     
-    <div class = "rating-list">
-            <ul>
-                <li id = "darjeeling-rating"></li>
-                <li id = "royal-rating"></li>
-                <li id = "fantastic-rating"></li>
-                <li id = "budapest-rating"></li>
-            </ul>
-    </div>
-     
 
     <form>
         <h2>Add your favourite movie to the header list</h2>
