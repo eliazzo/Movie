@@ -92,18 +92,41 @@ document.getElementById("budapest-name").innerText = Object.keys(movieData)[3];
  
   // User rating
 
-  const budapestRatingElement = document.getElementById("budapest-user-rating")
-  budapestRatingElement.innerText = "User rating: ";
+  const darjeelingRatingElement = document.getElementById("darjeeling-user-rating"); // selects the p element with the id "darjeeling-user-rating" 
+  darjeelingRatingElement.innerText = "User rating: ";
+
+  const royalRatingElement = document.getElementById("royal-user-rating");
+  royalRatingElement.innerText = "User rating: ";
+
+  const foxRatingElement = document.getElementById ("fox-user-rating");
+  foxRatingElement.innerText = "User rating: ";
+
+  const budapestRatingElement = document.getElementById("budapest-user-rating"); // sets budapestRatingElement variable to the p element "budapest-user-rating"
+  budapestRatingElement.innerText = "User rating: "; // sets the text of the p elements to "User rating: "
+
 
   function addUserRating(event){
       event.preventDefault();
-      const userRating = document.getElementById("user-rating").value; // returns user input
+      const userRating = document.getElementById("user-rating").value; // sets userRating variable to the user's rating
       const chosenFilm = movieDropdown.value // selects the chosen film (the key name string e.g., "The Grand Budapest Hotel") from the dropdown list
-      movieData[chosenFilm].userRating = userRating
+      movieData[chosenFilm].userRating = userRating // sets the userRating variable equal to the userRating property of the key e.g., "The Grand Budapest Hotel" {userRating:}
+
+      if(chosenFilm === "The Darjeeling Limited"){
+        darjeelingRatingElement.innerText = "User rating: " + userRating;
+      }
+
+      if(chosenFilm === "The Royal Tenenbaums"){
+        royalRatingElement.innerText = "User rating: " + userRating;
+      }
+
+      if(chosenFilm === "Fantastic Mr. Fox"){
+        foxRatingElement.innerText = "User rating: " + userRating;
+      }
       
       if (chosenFilm === "The Grand Budapest Hotel") {
         budapestRatingElement.innerText = "User rating: " + userRating;
       }
+     
       
 
   }
