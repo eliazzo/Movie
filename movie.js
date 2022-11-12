@@ -1,12 +1,13 @@
 //Object
 
-let movieData = {
-    "The Darjeeling Limited": {
+let movieData = { // object made up of 4 keys and 4 values
+    "The Darjeeling Limited": { // key (mostly a string)
       plot: "A year after their father's funeral, three brothers travel across India by train in an attempt to bond with each other.",
       cast: ["Jason Schwartzman", "Owen Wilson", "Adrien Brody"],
       runtime: 151,
       rating: 7.2,
-      year: 2007,
+      userRating: "",
+      year: 2007, // lines 5-10 value of "The Darjeeling Limited" key of movieData object but also an object itself made up of 6 key value pairs
     },
     "The Royal Tenenbaums": {
       plot: "The eccentric members of a dysfunctional family reluctantly gather under the same roof for various reasons",
@@ -14,6 +15,7 @@ let movieData = {
       year: 2001,
       cast: ["Gene Hackman", "Gwnyeth Paltrow", "Anjelica Huston"],
       runtime: 170,
+      userRating: "",
     },
     "Fantastic Mr. Fox": {
       year: 2009,
@@ -26,6 +28,7 @@ let movieData = {
       ],
       runtime: 147,
       rating: 7.9,
+      userRating: "",
     },
     "The Grand Budapest Hotel": {
       rating: 8.1,
@@ -33,51 +36,33 @@ let movieData = {
       year: 2014,
       plot: "A writer encounters the owner of an aging high-class hotel, who tells him of his early years serving as a lobby boy in the hotel's glorious years under an exceptional concierge.",
       cast: ["Ralph Fiennes", "F. Murray Abraham", "Mathieu Amalric"],
+      userRating: "",
     },
   }
-
-
-  /* let movieNameArray = Object.keys(movieData)
-  console.log(movieNameArray)
-  movieNameArray.forEach(function(movieName){
-    console.log(movieName)
-  }) // Prints a list of the movie Names */
-
-
-
-
-
- 
-  //Displaying movie data on webpage
-
-  const movieDataArrayList = document.getElementById("movie-info")
-
-  let movieDataArray = Object.keys(movieData)
-  console.log(movieDataArray)
-
-  for (let i in movieData){movieData[i].plot}
-
-  
-  let movieDataArrayPrint = movieDataArray.forEach(function(printMovieInfo){
-    console.log(printMovieInfo)
-
-
-  }) //Prints the data of each movie individually (separated by movie)
-  
 
 
   //Transferring object data (movie names) to html list
   
   const movieNameList = document.getElementById("movie-name-list")
   console.log(movieNameList)
-  const movieNames = Object.keys(movieData)
+  const movieNames = Object.keys(movieData) // returns the four movie name keys of the movieData object as an array
 
+  const movieDropdown = document.getElementById("movie-dropdown")
+  // const movieDropdown = document.querySelectorAll("[name=films]") 
 
   for (let i = 0; i < movieNames.length; i++){
-    const listItem = document.createElement("li") 
-    listItem.textContent = movieNames[i]
-    movieNameList.appendChild(listItem)
+    const listItem = document.createElement("li"); 
+    listItem.textContent = movieNames[i];
+    movieNameList.appendChild(listItem);
+
+    const optionItem = document.createElement("option");
+    optionItem.textContent = movieNames[i];
+    optionItem.value = movieNames[i];
+    movieDropdown.appendChild(optionItem);
+
   }
+
+
 
 
 // Movie names
@@ -105,10 +90,27 @@ document.getElementById("budapest-name").innerText = Object.keys(movieData)[3];
     movieCastList.appendChild(listItem)
   } 
  
+  // User rating
+
+  const budapestRatingElement = document.getElementById("budapest-user-rating")
+  budapestRatingElement.innerText = "User rating: ";
+
+  function addUserRating(event){
+      event.preventDefault();
+      const userRating = document.getElementById("user-rating").value; // returns user input
+      const chosenFilm = movieDropdown.value // selects the chosen film (the key name string e.g., "The Grand Budapest Hotel") from the dropdown list
+      movieData[chosenFilm].userRating = userRating
+      
+      if (chosenFilm === "The Grand Budapest Hotel") {
+        budapestRatingElement.innerText = "User rating: " + userRating;
+      }
+      
+
+  }
 
   // Working with the movieData object - plot text and movie rating on image hover
 
-  document.getElementById("darjeeling-plot").innerHTML = movieData["The Darjeeling Limited"].plot
+  document.getElementById("darjeeling-plot").innerHTML = "Plot: " + movieData["The Darjeeling Limited"].plot
   document.getElementById("royal-plot").innerHTML = movieData["The Royal Tenenbaums"].plot
   document.getElementById("fox-plot").innerHTML = movieData["Fantastic Mr. Fox"].plot
   document.getElementById("budapest-plot").innerHTML = movieData["The Grand Budapest Hotel"].plot

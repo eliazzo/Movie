@@ -21,7 +21,7 @@
 
         
         <div id="gallery-title">
-            <h2>Hover over the movie to see it's name, plot and rating</h2>
+            <h2></h2>
         </div>
      
      <div class = "gallery">
@@ -29,7 +29,8 @@
 
         <div class="wrapper">
             <div class="darjeeling-image">
-                <img id ="Darjeeling" src = "Darjeeling limited.jpg" width="300">
+                <button id = "darjeeling-year">The Darjeeling Limited</button>
+                <img id ="Darjeeling" src = "Darjeeling limited.jpg" width="300px">
                     <div id="text-box" class="text-box">
                         <p id="darjeeling-name"></p>
                         <p id = "darjeeling-plot"></p>
@@ -41,6 +42,7 @@
 
         <div class="wrapper">
             <div class="royal-image">
+                <button id = "royal-year">The Royal Tenenbaums</button>
                 <img id="Royal" src = "Royal Tenenbaums.jpg" width="300" >
                     <div id="text-box" class="text-box">
                         <p id="royal-name"></p>
@@ -53,6 +55,7 @@
 
         <div class ="wrapper">
             <div class="fox-image">
+                <button id = "fox-year">Fantastic Mr. Fox</button>
                 <img id ="fox" class="fox" src = "Mr Fox.jpg" alt="Mr Fox" width="300">
                     <div id="text-box" class="text-box">
                         <p id="fox-name"></p>
@@ -65,25 +68,21 @@
 
         <div class ="wrapper">
             <div class="grand-image">
+                <button id = "budapest-year">The Grand Budapest Hotel</button>
                 <img id ="Grand" src = "Grand budapest.jpg" width="300">
                     <div id="text-box" class="text-box">
                         <p id="budapest-name"></p>
                         <p id = "budapest-plot"></p>
                         <p id="budapest-rating"></p>
+                        <p id="budapest-user-rating"></p>
                     </div>
             </div>
         </div>
 
 
-     </div>
+   
 
-        <div class="buttons">
-            <h3>Click the green buttons to see the film's year of release! Double click to see the cast!</h3>
-                <button id = "darjeeling-year">The Darjeeling Limited</button>
-                <button id = "royal-year">The Royal Tenenbaums</button>
-                <button id = "fox-year">Fantastic Mr. Fox</button>
-                <button id = "budapest-year">The Grand Budapest Hotel</button>
-        </div>
+        
 
          <div class = "list">
             <h2>Cast</h2>
@@ -91,46 +90,16 @@
             </ul>
         </div> 
 
-    <div id="demo" class="demo">
-        
-        <p id = "demo2"></p>
-        <p id = "demo3"></p>
-        <p id = "demo4"></p>
     
-    </div>
 
     
 
-    <form>
-        <h2>Add your favourite movie to the header list</h2>
-        <div class = "form-box">
-            <label for = "title">Movie name</label>
-            <input type = "text" id = "title" placeholder = "Title">
-        </div>
-       <!-- <div class = "form-box">
-            <label for = "rating">Movie rating</label>
-            <input type = "number" id = "rating" placeholder = "Rating">
-        </div>
-        <div class = "form-box">
-            <label for = "plot">Moving plot</label>
-            <input type = "text" id= "plot" placeholder = "Plot">
-        </div>
-        <div class = "form-box">
-            <label for = "cast">Movie cast</label>
-            <input type = "text" id = "cast" placeholder="Cast">
-        </div>
-        <div class = "form-box">
-            <label for="runtime">Movie runtime</label>
-            <input type = "number" id="runtime" placeholder="Runtime">
-        </div>
-        <div class = "form-box">
-            <label for="rating">Movie rating</label>
-            <input type="number" id="rating" placeholder="Rating">
-        </div>-->
-        <div class="form-box">
-            <button id="btn">Click to add</button>
-        </div>
-                
+    <form id="film-rating-form" onsubmit="addUserRating(event)">
+        <label for="films"></label> 
+        <select name="films" id="movie-dropdown">
+        </select>
+        <input id="user-rating" type="number" min="0" max="10" step="0.1" placeholder="type your film rating here">
+        <input type="submit" value="Submit">        
     </form>
         
 

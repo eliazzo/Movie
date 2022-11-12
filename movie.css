@@ -14,12 +14,12 @@ body{
 }
 
 #gallery-title h2{
-    height: 100px;
-    padding-top: 50px;
+    height: 50px;
+    padding-top: 20px;
     text-align: center;
     background-color: rgb(204, 255, 21);
     font-family: sans-serif;
-    font-size: 2rem;
+    font-size: 20px;
     letter-spacing: 2px;
     color: white;
 }
@@ -34,8 +34,6 @@ body{
     color:rgb(52, 202, 235);
 
 }
-
-
 
 
 .gallery{
@@ -56,6 +54,10 @@ body{
     justify-content: center;
 }
 
+.gallery .wrapper .grand-image #grand img{
+    border: 1px red solid;
+}
+
 .text-box{
     position: absolute;
     top: 150px;
@@ -64,16 +66,17 @@ body{
 
 }
 
+.wrapper{
+    position: relative;
+    display: flex;
+}
+
 .wrapper:hover{
 border: black 1px solid;
 
 }
 
-.wrapper{
-    position: relative;
-    display: inline-block
 
-}
 .wrapper:hover .text-box{
     position: absolute;
     text-align: center;
@@ -91,32 +94,23 @@ border: black 1px solid;
 
 
 
-.buttons{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-}
-
 button{
     background-color: yellowgreen;
     border: 10px;
     border-color: red;
     height: 100px;
     width: 200px;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
     color:rgb(64, 62, 62);
     margin-top: 5px;
 }
 
-form{
-    padding-top: 100px;
-    height: 400px;
+#film-rating-form{
     border: solid black 1px;
-    font-family: tahoma;
-    color: orange;
-    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
 
 }
 
