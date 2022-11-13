@@ -123,15 +123,15 @@ document.getElementById("budapest-name").innerText = Object.keys(movieData)[3];
   // Working with the movieData object - plot text and movie rating on image hover
 
   document.getElementById("darjeeling-plot").innerHTML = "Plot: " + movieData["The Darjeeling Limited"].plot
-  document.getElementById("royal-plot").innerHTML = movieData["The Royal Tenenbaums"].plot
-  document.getElementById("fox-plot").innerHTML = movieData["Fantastic Mr. Fox"].plot
-  document.getElementById("budapest-plot").innerHTML = movieData["The Grand Budapest Hotel"].plot
+  document.getElementById("royal-plot").innerHTML = "Plot: " + movieData["The Royal Tenenbaums"].plot
+  document.getElementById("fox-plot").innerHTML = "Plot: " + movieData["Fantastic Mr. Fox"].plot
+  document.getElementById("budapest-plot").innerHTML = "Plot: " + movieData["The Grand Budapest Hotel"].plot
 
   
-  document.getElementById("darjeeling-rating").innerHTML = movieData["The Darjeeling Limited"].rating;
-  document.getElementById("royal-rating").innerHTML = movieData["The Royal Tenenbaums"].rating;
-  document.getElementById("fantastic-rating").innerHTML = movieData["Fantastic Mr. Fox"].rating;
-  document.getElementById("budapest-rating").innerHTML = movieData["The Grand Budapest Hotel"].rating;
+  document.getElementById("darjeeling-rating").innerHTML = "IMDB rating: " + movieData["The Darjeeling Limited"].rating;
+  document.getElementById("royal-rating").innerHTML = "IMDB rating: " + movieData["The Royal Tenenbaums"].rating;
+  document.getElementById("fantastic-rating").innerHTML = "IMDB rating: " + movieData["Fantastic Mr. Fox"].rating;
+  document.getElementById("budapest-rating").innerHTML = "IMDB rating: " + movieData["The Grand Budapest Hotel"].rating;
 
 //END
 
@@ -141,34 +141,34 @@ document.getElementById("budapest-name").innerText = Object.keys(movieData)[3];
 
   const DarjeelingButton = document.getElementById('darjeeling-year')
       DarjeelingButton.addEventListener("click", function(){
-      document.getElementById('darjeeling-year').innerText = movieData["The Darjeeling Limited"].year
+      document.getElementById('darjeeling-year').innerText = "Year: " + movieData["The Darjeeling Limited"].year
       })
       DarjeelingButton.addEventListener("dblclick", function(){
-      document.getElementById('darjeeling-year').innerText = movieData["The Darjeeling Limited"].cast
+      document.getElementById('darjeeling-year').innerText = "Cast: " + movieData["The Darjeeling Limited"].cast
       })
 
   const RoyalButton = document.getElementById('royal-year')
       RoyalButton.addEventListener("click", function(){
-        document.getElementById('royal-year').innerText = movieData["The Royal Tenenbaums"].year
+        document.getElementById('royal-year').innerText = "Year: " + movieData["The Royal Tenenbaums"].year
       })
       RoyalButton.addEventListener("dblclick", function(){
-        document.getElementById('royal-year').innerText = movieData["The Royal Tenenbaums"].cast
+        document.getElementById('royal-year').innerText = "Cast: " + movieData["The Royal Tenenbaums"].cast
       })
 
   const foxButton = document.getElementById('fox-year')
       foxButton.addEventListener("click", function(){
-        document.getElementById('fox-year').innerText = movieData["Fantastic Mr. Fox"].year
+        document.getElementById('fox-year').innerText = "Year: " + movieData["Fantastic Mr. Fox"].year
       })
       foxButton.addEventListener("dblclick", function(){
-        document.getElementById('fox-year').innerText = movieData["Fantastic Mr. Fox"].cast
+        document.getElementById('fox-year').innerText = "Cast: " + movieData["Fantastic Mr. Fox"].cast
       })
       
   const budapestButton = document.getElementById('budapest-year')
       budapestButton.addEventListener("click", function(){
-        document.getElementById('budapest-year').innerText = movieData["The Grand Budapest Hotel"].year
+        document.getElementById('budapest-year').innerText = "Year: " + movieData["The Grand Budapest Hotel"].year
       })
       budapestButton.addEventListener("dblclick", function(){
-        document.getElementById('budapest-year').innerText = movieData["The Grand Budapest Hotel"].cast
+        document.getElementById('budapest-year').innerText = "Cast: " + movieData["The Grand Budapest Hotel"].cast
       })
 
 // END

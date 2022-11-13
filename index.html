@@ -17,7 +17,6 @@
 
         <div class="wrapper">
             <div class="darjeeling-image">
-                <button id = "darjeeling-year">The Darjeeling Limited</button>
                 <img id ="Darjeeling" src = "darjeeling.jpg" width="300px">
                     <div id="text-box" class="text-box">
                         <p id="darjeeling-name"></p>
@@ -25,13 +24,13 @@
                         <p id="darjeeling-rating"></p>
                         <p id="darjeeling-user-rating"></p>
                     </div>
+                <button id = "darjeeling-year">The Darjeeling Limited</button>
             </div> 
         </div>
 
 
         <div class="wrapper">
             <div class="royal-image">
-                <button id = "royal-year">The Royal Tenenbaums</button>
                 <img id="Royal" src = "tenenbaums.jpg" width="300" >
                     <div id="text-box" class="text-box">
                         <p id="royal-name"></p>
@@ -39,13 +38,13 @@
                          <p id="royal-rating"></p>
                          <p id="royal-user-rating"></p>
                     </div>
+                <button id = "royal-year">The Royal Tenenbaums</button>
             </div>
         </div>
 
 
         <div class ="wrapper">
             <div class="fox-image">
-                <button id = "fox-year">Fantastic Mr. Fox</button>
                 <img id ="fox" class="fox" src = "Mr Fox.jpg" alt="Mr Fox" width="300">
                     <div id="text-box" class="text-box">
                         <p id="fox-name"></p>
@@ -53,13 +52,13 @@
                         <p id="fantastic-rating"></p>
                         <p id="fox-user-rating"></p>
                     </div>
+                <button id = "fox-year">Fantastic Mr. Fox</button>
             </div>
         </div>
 
 
         <div class ="wrapper">
             <div class="grand-image">
-                <button id = "budapest-year">The Grand Budapest Hotel</button>
                 <img id ="Grand" src = "budapest.jpg" width="300">
                     <div id="text-box" class="text-box">
                         <p id="budapest-name"></p>
@@ -67,8 +66,10 @@
                         <p id="budapest-rating"></p>
                         <p id="budapest-user-rating"></p>
                     </div>
+                <button id = "budapest-year">The Grand Budapest Hotel</button>
             </div>
         </div>
+        
      </div>
 
     <form id="film-rating-form" onsubmit="addUserRating(event)">
@@ -77,7 +78,7 @@
         <select name="films" id="movie-dropdown">
         </select>
         <input id="user-rating" type="number" min="0" max="10" step="0.1" placeholder="type your film rating here">
-        <input type="submit" value="Submit">        
+        <input id="user-rating-submit" type="submit" value="Submit">        
     </form>
         
     </body>
