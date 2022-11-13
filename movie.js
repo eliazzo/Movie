@@ -64,7 +64,6 @@ let movieData = { // object made up of 4 keys and 4 values
 
 
 
-
 // Movie names
 
 let darjeelingNameHolder = document.getElementById("darjeeling-name"); // selects the p "darjeeling-name" element
@@ -78,31 +77,21 @@ document.getElementById("fox-name").innerText = Object.keys(movieData)[2];
 
 document.getElementById("budapest-name").innerText = Object.keys(movieData)[3];
 
-  //Transfering object data (movie cast) to html list  **************** working but I don't know how to create this using Object. ***************************
 
-  const movieCastList = document.getElementById("movie-cast-list")
-  //console.log(movieCastList)
-  const movieCast = [movieData["The Darjeeling Limited"].cast, movieData["The Royal Tenenbaums"].cast, movieData["Fantastic Mr. Fox"].cast, movieData["Fantastic Mr. Fox"].cast]
-
-  for (let i = 0; i < movieCast.length; i++){
-    const listItem = document.createElement("li")
-    listItem.textContent = movieCast[i]
-    movieCastList.appendChild(listItem)
-  } 
  
-  // User rating
+ // User rating
 
   const darjeelingRatingElement = document.getElementById("darjeeling-user-rating"); // selects the p element with the id "darjeeling-user-rating" 
-  darjeelingRatingElement.innerText = "User rating: ";
+  darjeelingRatingElement.innerText = "My rating: ";
 
   const royalRatingElement = document.getElementById("royal-user-rating");
-  royalRatingElement.innerText = "User rating: ";
+  royalRatingElement.innerText = "My rating: ";
 
   const foxRatingElement = document.getElementById ("fox-user-rating");
-  foxRatingElement.innerText = "User rating: ";
+  foxRatingElement.innerText = "My rating: ";
 
   const budapestRatingElement = document.getElementById("budapest-user-rating"); // sets budapestRatingElement variable to the p element "budapest-user-rating"
-  budapestRatingElement.innerText = "User rating: "; // sets the text of the p elements to "User rating: "
+  budapestRatingElement.innerText = "My rating: "; // sets the text of the p elements to "User rating: "
 
 
   function addUserRating(event){
@@ -112,19 +101,19 @@ document.getElementById("budapest-name").innerText = Object.keys(movieData)[3];
       movieData[chosenFilm].userRating = userRating // sets the userRating variable equal to the userRating property of the key e.g., "The Grand Budapest Hotel" {userRating:}
 
       if(chosenFilm === "The Darjeeling Limited"){
-        darjeelingRatingElement.innerText = "User rating: " + userRating;
+        darjeelingRatingElement.innerText = "My rating: " + userRating;
       }
 
       if(chosenFilm === "The Royal Tenenbaums"){
-        royalRatingElement.innerText = "User rating: " + userRating;
+        royalRatingElement.innerText = "My rating: " + userRating;
       }
 
       if(chosenFilm === "Fantastic Mr. Fox"){
-        foxRatingElement.innerText = "User rating: " + userRating;
+        foxRatingElement.innerText = "My rating: " + userRating;
       }
       
       if (chosenFilm === "The Grand Budapest Hotel") {
-        budapestRatingElement.innerText = "User rating: " + userRating;
+        budapestRatingElement.innerText = "My rating: " + userRating;
       }
      
       
