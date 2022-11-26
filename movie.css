@@ -1,12 +1,15 @@
 
 .name-list{
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    /* text-align: center; */
     height: auto;
     width: auto;
-    font-family: impact;
+    font-family: sans-serif;
+    font-weight: bold;
     font-size: 35px;
     letter-spacing: 2px;
-    color:navy;
+    color:hotpink;
 
 }
 
@@ -28,6 +31,7 @@
     display: flex;
     justify-content: center;
     height: 500px;
+    border-radius: 5px;
 }
 
 
@@ -62,53 +66,66 @@
 
 
 button{
-    background-color: yellowgreen;
     border: 10px;
     height: 100px;
     width: 100%;
     letter-spacing: 2px;
     font-size: 20px;
-    color:rgb(64, 62, 62);
+    font-weight: bold;
+    color: white;
     margin-top: 5px;
     margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: #FF5733;
 }
 
 button:hover{
-    background: rgb(211, 211, 211);
+    box-shadow: 0 0 4px 4px rgba(0, 140, 186, 0.5);
 }
 
 #film-rating-form p{
-    font-family: impact;
+    font-family: sans-serif;
+    font-weight: bold;
     font-size: 35px;
     letter-spacing: 2px;
-    color: rgb(64, 62, 62);
+    color:hotpink;
 }
 
 #film-rating-form{
-    background: rgb(211, 211, 211);
     display: flex;
     flex-direction: column;
     gap: 30px;
     padding: 10px;
-    width: 500px;
+    width: 80%;
     justify-content: center;
     margin: auto;
+    margin-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
+    border-radius: 5px;
+    align-items: center;
 
 }
 
 #movie-dropdown, #user-rating, #user-rating-submit{
-    font-family: 'Times New Roman', Times, serif;
-    color: navy;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
     width: 300px;
     border: none;
     font-size: 20px;
-    background-color: yellowgreen;
+    background-color: #FF5733;
     height: 50px;
+    border-radius: 5px;
 }
 
 #user-rating-submit:hover{
-    background-color: rgb(211, 211, 211);
+    box-shadow: 0 0 4px 4px rgba(0, 140, 186, 0.5);
+}
+
+#user-rating::placeholder{
+    color: white;
+    font-size: small;
 }
 
 

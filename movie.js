@@ -3,7 +3,7 @@
 let movieData = { // object made up of 4 keys and 4 values
     "The Darjeeling Limited": { // key (mostly a string)
       plot: "A year after their father's funeral, three brothers travel across India by train in an attempt to bond with each other.",
-      cast: ["Jason Schwartzman", "Owen Wilson", "Adrien Brody"],
+      cast: ["Jason Schwartzman", " Owen Wilson", " Adrien Brody"],
       runtime: 151,
       rating: 7.2,
       userRating: "",
@@ -13,7 +13,7 @@ let movieData = { // object made up of 4 keys and 4 values
       plot: "The eccentric members of a dysfunctional family reluctantly gather under the same roof for various reasons",
       rating: 7.6,
       year: 2001,
-      cast: ["Gene Hackman", "Gwnyeth Paltrow", "Anjelica Huston"],
+      cast: ["Gene Hackman", " Gwnyeth Paltrow", " Anjelica Huston"],
       runtime: 170,
       userRating: "",
     },
@@ -22,9 +22,9 @@ let movieData = { // object made up of 4 keys and 4 values
       plot: "An urbane fox cannot resist returning to his farm raiding ways and then must help his community survive the farmers' retaliation.",
       cast: [
         "George Clooney",
-        "Meryl Streep",
-        "Bill Murray",
-        "Jason Schwartzman",
+        " Meryl Streep",
+        " Bill Murray",
+        " Jason Schwartzman",
       ],
       runtime: 147,
       rating: 7.9,
@@ -35,7 +35,7 @@ let movieData = { // object made up of 4 keys and 4 values
       runtime: 159,
       year: 2014,
       plot: "A writer encounters the owner of an aging high-class hotel, who tells him of his early years serving as a lobby boy in the hotel's glorious years under an exceptional concierge.",
-      cast: ["Ralph Fiennes", "F. Murray Abraham", "Mathieu Amalric"],
+      cast: ["Ralph Fiennes", " F. Murray Abraham", " Mathieu Amalric"],
       userRating: "",
     },
   }
@@ -64,7 +64,7 @@ let movieData = { // object made up of 4 keys and 4 values
 
 
 
-// Movie names
+// Setting buttons to display movie names
 
 let darjeelingNameHolder = document.getElementById("darjeeling-name"); // selects the p "darjeeling-name" element
 let darjeelingName = Object.keys(movieData)[0]; // selects "the Darjeeling Limited" from the Object.keys(movieData) array
@@ -76,6 +76,27 @@ document.getElementById("royal-name").innerHTML = Object.keys(movieData)[1];
 document.getElementById("fox-name").innerText = Object.keys(movieData)[2];
 
 document.getElementById("budapest-name").innerText = Object.keys(movieData)[3];
+
+
+//Revert to original button text
+
+function buttonTextOriginal(){
+  const buttonList = document.querySelectorAll(".button-text");
+  console.log(buttonList)
+
+  for(let i = 0; i < buttonList.length; i++){
+      buttonList[i].innerHTML = Object.keys(movieData)[i];
+
+}
+}
+
+// const buttonList = document.querySelectorAll(".button-text")
+// buttonList.addEventListener("onmouseout", function(){
+//   for(let i = 0; i < buttonList.length; i++){
+//     buttonList[i].innerHTML = Object.keys(movieData)[i]
+//     }
+//   })
+
 
 
  
@@ -172,6 +193,7 @@ document.getElementById("budapest-name").innerText = Object.keys(movieData)[3];
       })
 
 // END
+
 
 
 

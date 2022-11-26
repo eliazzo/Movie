@@ -24,7 +24,7 @@
                         <p id="darjeeling-rating"></p>
                         <p id="darjeeling-user-rating"></p>
                     </div>
-                <button id = "darjeeling-year">The Darjeeling Limited</button>
+                <button class="button-text" id = "darjeeling-year" onmouseout="buttonTextOriginal()">The Darjeeling Limited</button>
             </div> 
         </div>
 
@@ -38,7 +38,7 @@
                          <p id="royal-rating"></p>
                          <p id="royal-user-rating"></p>
                     </div>
-                <button id = "royal-year">The Royal Tenenbaums</button>
+                <button class="button-text" id = "royal-year" onmouseout="buttonTextOriginal()">The Royal Tenenbaums</button>
             </div>
         </div>
 
@@ -52,7 +52,7 @@
                         <p id="fantastic-rating"></p>
                         <p id="fox-user-rating"></p>
                     </div>
-                <button id = "fox-year">Fantastic Mr. Fox</button>
+                <button class="button-text" id = "fox-year" onmouseout="buttonTextOriginal()">Fantastic Mr. Fox</button>
             </div>
         </div>
 
@@ -66,18 +66,18 @@
                         <p id="budapest-rating"></p>
                         <p id="budapest-user-rating"></p>
                     </div>
-                <button id = "budapest-year">The Grand Budapest Hotel</button>
+                <button class="button-text" id = "budapest-year" onmouseout="buttonTextOriginal()">The Grand Budapest Hotel</button>
             </div>
         </div>
         
      </div>
 
     <form id="film-rating-form" onsubmit="addUserRating(event)">
-        <p>Add your rating to the poster!</p>
+        <p>Add your movie rating to the poster</p>
         <label for="films"></label> 
         <select name="films" id="movie-dropdown">
         </select>
-        <input id="user-rating" type="number" min="0" max="10" step="0.1" placeholder="type your film rating here">
+        <input id="user-rating" type="number" min="0" max="10" step="0.1" placeholder="Type your movie rating here">
         <input id="user-rating-submit" type="submit" value="Submit">        
     </form>
         
