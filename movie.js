@@ -45,19 +45,19 @@ let movieData = { // object made up of 4 keys and 4 values
   
   const movieNameList = document.getElementById("movie-name-list")
   console.log(movieNameList)
-  const movieNames = Object.keys(movieData) // returns the four movie name keys of the movieData object as an array
+  const movieNamesArray = Object.keys(movieData) // returns the four movie name keys of the movieData object as an array
 
   const movieDropdown = document.getElementById("movie-dropdown")
   // const movieDropdown = document.querySelectorAll("[name=films]") 
 
-  for (let i = 0; i < movieNames.length; i++){
+  for (let i = 0; i < movieNamesArray.length; i++){
     const listItem = document.createElement("li"); 
-    listItem.textContent = movieNames[i];
+    listItem.textContent = movieNamesArray[i];
     movieNameList.appendChild(listItem);
 
     const optionItem = document.createElement("option");
-    optionItem.textContent = movieNames[i];
-    optionItem.value = movieNames[i];
+    optionItem.textContent = movieNamesArray[i];
+    optionItem.value = movieNamesArray[i];
     movieDropdown.appendChild(optionItem);
 
   }
@@ -90,33 +90,34 @@ function buttonTextOriginal(){
 }
 }
 
-// const buttonList = document.querySelectorAll(".button-text")
-// buttonList.addEventListener("onmouseout", function(){
-//   for(let i = 0; i < buttonList.length; i++){
-//     buttonList[i].innerHTML = Object.keys(movieData)[i]
-//     }
-//   })
-
-
-
  
  // User rating
 
+ const ratingElementList = document.querySelectorAll(".user-rating");
+ for(let i = 0; i < ratingElementList.length; i++){
+  ratingElementList[i].innerText = "My rating: ";
+ }
+
   const darjeelingRatingElement = document.getElementById("darjeeling-user-rating"); // selects the p element with the id "darjeeling-user-rating" 
-  darjeelingRatingElement.innerText = "My rating: ";
+  // darjeelingRatingElement.innerText = "My rating: ";
 
   const royalRatingElement = document.getElementById("royal-user-rating");
-  royalRatingElement.innerText = "My rating: ";
+  // royalRatingElement.innerText = "My rating: ";
 
   const foxRatingElement = document.getElementById ("fox-user-rating");
-  foxRatingElement.innerText = "My rating: ";
+  // foxRatingElement.innerText = "My rating: ";
 
   const budapestRatingElement = document.getElementById("budapest-user-rating"); // sets budapestRatingElement variable to the p element "budapest-user-rating"
-  budapestRatingElement.innerText = "My rating: "; // sets the text of the p elements to "User rating: "
+  // budapestRatingElement.innerText = "My rating: "; // sets the text of the p elements to "User rating: "
 
 
-  function addUserRating(event){
-      event.preventDefault();
+function summer(a,b){
+  return a + b;
+}
+
+  function addUserRating(event){ // event is an object that contains the html properties about the user event (form submit event)
+      console.log(event);
+      event.preventDefault(); // default form behaviour is to refresh the page when the form is submitted // calls the preventDefault method on the submit event
       const userRating = document.getElementById("user-rating").value; // sets userRating variable to the user's rating
       const chosenFilm = movieDropdown.value // selects the chosen film (the key name string e.g., "The Grand Budapest Hotel") from the dropdown list
       movieData[chosenFilm].userRating = userRating // sets the userRating variable equal to the userRating property of the key e.g., "The Grand Budapest Hotel" {userRating:}
@@ -142,6 +143,12 @@ function buttonTextOriginal(){
   }
 
   // Working with the movieData object - plot text and movie rating on image hover
+
+  // const moviePlotList = document.querySelectorAll(".movie-plot");
+  
+  // for(let i = 0; i < moviePlotList.length; i++){
+  //   moviePlotList[i].innerText = "Plot: " + Object.keys(movieData)[i].plot;
+  // }
 
   document.getElementById("darjeeling-plot").innerHTML = "Plot: " + movieData["The Darjeeling Limited"].plot
   document.getElementById("royal-plot").innerHTML = "Plot: " + movieData["The Royal Tenenbaums"].plot
