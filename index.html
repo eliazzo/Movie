@@ -8,23 +8,27 @@
 
     <body>
 
-        <div class = "name-list">
+        <div class ="name-list max-viewport-h">
              <ul id="movie-name-list" style="list-style: none;">
              </ul>
         </div>
 
-     <div class = "gallery">
+     <div class ="gallery max-viewport-h">
 
         <div class="wrapper">
             <div class="darjeeling-image">
                 <img id ="Darjeeling" src = "darjeeling.jpg" width="300px">
                     <div id="text-box" class="text-box">
                         <p id="darjeeling-name"></p>
-                        <p id = "darjeeling-plot"></p>
-                        <p id="darjeeling-rating"></p>
-                        <p id="darjeeling-user-rating"></p>
+                        <p id = "darjeeling-plot" class="movie-plot"></p>
+                        <p id="darjeeling-rating" class="rating"></p>
+                        <p id="darjeeling-user-rating" class="user-rating"></p>
                     </div>
-                <button class="button-text" id = "darjeeling-year" onmouseout="buttonTextOriginal()">The Darjeeling Limited</button>
+                <button 
+                    class="button-text" 
+                    id = "darjeeling-year" 
+                    onmouseout="buttonTextOriginal()"
+                >The Darjeeling Limited</button>
             </div> 
         </div>
 
@@ -34,11 +38,15 @@
                 <img id="Royal" src = "tenenbaums.jpg" width="300" >
                     <div id="text-box" class="text-box">
                         <p id="royal-name"></p>
-                         <p id = "royal-plot"></p>
-                         <p id="royal-rating"></p>
-                         <p id="royal-user-rating"></p>
+                         <p id = "royal-plot" class="movie-plot"></p>
+                         <p id="royal-rating" class="rating"></p>
+                         <p id="royal-user-rating" class="user-rating"></p>
                     </div>
-                <button class="button-text" id = "royal-year" onmouseout="buttonTextOriginal()">The Royal Tenenbaums</button>
+                <button 
+                    class="button-text" 
+                    id = "royal-year" 
+                    onmouseout="buttonTextOriginal()"
+                >The Royal Tenenbaums</button>
             </div>
         </div>
 
@@ -48,11 +56,15 @@
                 <img id ="fox" class="fox" src = "Mr Fox.jpg" alt="Mr Fox" width="300">
                     <div id="text-box" class="text-box">
                         <p id="fox-name"></p>
-                        <p id = "fox-plot"></p>
-                        <p id="fantastic-rating"></p>
-                        <p id="fox-user-rating"></p>
+                        <p id = "fox-plot" class="movie-plot"></p>
+                        <p id="fantastic-rating" class="rating"></p>
+                        <p id="fox-user-rating" class="user-rating"></p>
                     </div>
-                <button class="button-text" id = "fox-year" onmouseout="buttonTextOriginal()">Fantastic Mr. Fox</button>
+                <button 
+                    class="button-text" 
+                    id = "fox-year" 
+                    onmouseout="buttonTextOriginal()"
+                >Fantastic Mr. Fox</button>
             </div>
         </div>
 
@@ -62,17 +74,21 @@
                 <img id ="Grand" src = "budapest.jpg" width="300">
                     <div id="text-box" class="text-box">
                         <p id="budapest-name"></p>
-                        <p id = "budapest-plot"></p>
-                        <p id="budapest-rating"></p>
-                        <p id="budapest-user-rating"></p>
+                        <p id = "budapest-plot" class="movie-plot"></p>
+                        <p id="budapest-rating" class="rating"></p>
+                        <p id="budapest-user-rating" class="user-rating"></p>
                     </div>
-                <button class="button-text" id = "budapest-year" onmouseout="buttonTextOriginal()">The Grand Budapest Hotel</button>
+                <button 
+                    class="button-text" 
+                    id = "budapest-year" 
+                    onmouseout="buttonTextOriginal()"
+                >The Grand Budapest Hotel</button>
             </div>
         </div>
         
      </div>
 
-    <form id="film-rating-form" onsubmit="addUserRating(event)">
+    <form class="max-viewport-h" id="film-rating-form" onsubmit="addUserRating(event)">
         <p>Add your movie rating to the poster</p>
         <label for="films"></label> 
         <select name="films" id="movie-dropdown">

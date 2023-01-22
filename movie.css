@@ -3,14 +3,17 @@
     display: flex;
     flex-wrap: wrap;
     /* text-align: center; */
-    height: auto;
     width: auto;
     font-family: sans-serif;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 75px;
     letter-spacing: 2px;
     color:hotpink;
 
+}
+
+.max-viewport-h {
+    height: 100vh;
 }
 
 

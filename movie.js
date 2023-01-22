@@ -43,9 +43,9 @@ let movieData = { // object made up of 4 keys and 4 values
 
   //Transferring object data (movie names) to html list
   
-  const movieNameList = document.getElementById("movie-name-list")
-  console.log(movieNameList)
-  const movieNamesArray = Object.keys(movieData) // returns the four movie name keys of the movieData object as an array
+  const movieNameList = document.getElementById("movie-name-list");
+  console.log(movieNameList);
+  const movieNamesArray = Object.keys(movieData); // returns the four movie name keys of the movieData object as an array
 
   const movieDropdown = document.getElementById("movie-dropdown")
   // const movieDropdown = document.querySelectorAll("[name=films]") 
@@ -95,25 +95,18 @@ function buttonTextOriginal(){
 
  const ratingElementList = document.querySelectorAll(".user-rating");
  for(let i = 0; i < ratingElementList.length; i++){
-  ratingElementList[i].innerText = "My rating: ";
+  ratingElementList[i].innerText = "My rating: "; // sets the text of the p elements to "User rating: "
  }
 
   const darjeelingRatingElement = document.getElementById("darjeeling-user-rating"); // selects the p element with the id "darjeeling-user-rating" 
-  // darjeelingRatingElement.innerText = "My rating: ";
 
   const royalRatingElement = document.getElementById("royal-user-rating");
-  // royalRatingElement.innerText = "My rating: ";
-
+  
   const foxRatingElement = document.getElementById ("fox-user-rating");
-  // foxRatingElement.innerText = "My rating: ";
-
+ 
   const budapestRatingElement = document.getElementById("budapest-user-rating"); // sets budapestRatingElement variable to the p element "budapest-user-rating"
-  // budapestRatingElement.innerText = "My rating: "; // sets the text of the p elements to "User rating: "
 
 
-function summer(a,b){
-  return a + b;
-}
 
   function addUserRating(event){ // event is an object that contains the html properties about the user event (form submit event)
       console.log(event);
@@ -142,26 +135,26 @@ function summer(a,b){
 
   }
 
-  // Working with the movieData object - plot text and movie rating on image hover
-
-  // const moviePlotList = document.querySelectorAll(".movie-plot");
+  // Working with the movieData object - 
   
-  // for(let i = 0; i < moviePlotList.length; i++){
-  //   moviePlotList[i].innerText = "Plot: " + Object.keys(movieData)[i].plot;
-  // }
+  // Plot text on hover
 
-  document.getElementById("darjeeling-plot").innerHTML = "Plot: " + movieData["The Darjeeling Limited"].plot
-  document.getElementById("royal-plot").innerHTML = "Plot: " + movieData["The Royal Tenenbaums"].plot
-  document.getElementById("fox-plot").innerHTML = "Plot: " + movieData["Fantastic Mr. Fox"].plot
-  document.getElementById("budapest-plot").innerHTML = "Plot: " + movieData["The Grand Budapest Hotel"].plot
+  const plotFromObjectArr = [movieData["The Darjeeling Limited"].plot,  movieData["The Royal Tenenbaums"].plot, movieData["Fantastic Mr. Fox"].plot,movieData["The Grand Budapest Hotel"].plot];
+  for (let i=0; i<plotFromObjectArr.length; i++){ // Iterates through Object movie plot information
 
+  const plotList = document.querySelectorAll(".movie-plot");
+  for (let i=0; i<plotList.length; i++){ // Iterates through .movie-plot elements
+    plotList[i].innerText = "Plot: " + plotFromObjectArr[i]; // Applies "Plot: " + Object movie plot information to the elements inner text
+  }
+}
+
+  // Movie rating on hover
   
-  document.getElementById("darjeeling-rating").innerHTML = "IMDB rating: " + movieData["The Darjeeling Limited"].rating;
-  document.getElementById("royal-rating").innerHTML = "IMDB rating: " + movieData["The Royal Tenenbaums"].rating;
-  document.getElementById("fantastic-rating").innerHTML = "IMDB rating: " + movieData["Fantastic Mr. Fox"].rating;
-  document.getElementById("budapest-rating").innerHTML = "IMDB rating: " + movieData["The Grand Budapest Hotel"].rating;
-
-//END
+const ratingFromObjectArr = [movieData["The Darjeeling Limited"].rating, movieData["The Royal Tenenbaums"].rating, movieData["Fantastic Mr. Fox"].rating, movieData["The Grand Budapest Hotel"].rating]
+const ratingList = document.querySelectorAll(".rating");
+for (let i=0; i<ratingList.length; i++){
+  ratingList[i].innerText = "IMDB rating: " + ratingFromObjectArr[i];
+}
 
 
 
