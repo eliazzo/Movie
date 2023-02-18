@@ -63,34 +63,19 @@ let movieData = { // object made up of 4 keys and 4 values
   }
 
 
+// Set buttons to display movie names
 
-// Setting buttons to display movie names
-
-let darjeelingNameHolder = document.getElementById("darjeeling-name"); // selects the p "darjeeling-name" element
-let darjeelingName = Object.keys(movieData)[0]; // selects "the Darjeeling Limited" from the Object.keys(movieData) array
-console.log(darjeelingName);
-darjeelingNameHolder.innerText = darjeelingName; // sets the inner text of the p "darjeeling-name" element to the darjeelingName variable
-
-document.getElementById("royal-name").innerHTML = Object.keys(movieData)[1];
-
-document.getElementById("fox-name").innerText = Object.keys(movieData)[2];
-
-document.getElementById("budapest-name").innerText = Object.keys(movieData)[3];
-
-
-//Revert to original button text
+// Revert to original button text
+const buttonList = document.querySelectorAll(".button-text");
 
 function buttonTextOriginal(){
-  const buttonList = document.querySelectorAll(".button-text");
-  console.log(buttonList)
-
   for(let i = 0; i < buttonList.length; i++){
       buttonList[i].innerHTML = Object.keys(movieData)[i];
-
 }
 }
 
- 
+
+
  // User rating
 
  const ratingElementList = document.querySelectorAll(".user-rating");
@@ -150,9 +135,9 @@ function buttonTextOriginal(){
 
   // Movie rating on hover
   
-const ratingFromObjectArr = [movieData["The Darjeeling Limited"].rating, movieData["The Royal Tenenbaums"].rating, movieData["Fantastic Mr. Fox"].rating, movieData["The Grand Budapest Hotel"].rating]
+const ratingFromObjectArr = [movieData["The Darjeeling Limited"].rating, movieData["The Royal Tenenbaums"].rating, movieData["Fantastic Mr. Fox"].rating, movieData["The Grand Budapest Hotel"].rating];
 const ratingList = document.querySelectorAll(".rating");
-for (let i=0; i<ratingList.length; i++){
+for (let i = 0; i < ratingList.length; i++){
   ratingList[i].innerText = "IMDB rating: " + ratingFromObjectArr[i];
 }
 
@@ -160,37 +145,23 @@ for (let i=0; i<ratingList.length; i++){
 
   //Buttons to reveal year "click" and cast "dblclick"
 
-  const DarjeelingButton = document.getElementById('darjeeling-year')
-      DarjeelingButton.addEventListener("click", function(){
-      document.getElementById('darjeeling-year').innerText = "Year: " + movieData["The Darjeeling Limited"].year
-      })
-      DarjeelingButton.addEventListener("dblclick", function(){
-      document.getElementById('darjeeling-year').innerText = "Cast: " + movieData["The Darjeeling Limited"].cast
-      })
+  
+  const yearFromObjectArr = [movieData["The Darjeeling Limited"].year, movieData["The Royal Tenenbaums"].year, movieData["Fantastic Mr. Fox"].year, movieData["The Grand Budapest Hotel"].year]
 
-  const RoyalButton = document.getElementById('royal-year')
-      RoyalButton.addEventListener("click", function(){
-        document.getElementById('royal-year').innerText = "Year: " + movieData["The Royal Tenenbaums"].year
-      })
-      RoyalButton.addEventListener("dblclick", function(){
-        document.getElementById('royal-year').innerText = "Cast: " + movieData["The Royal Tenenbaums"].cast
-      })
+  function displayYear(){
+    for (let i = 0; i < buttonList.length; i ++) {
+      buttonList[i].innerText = yearFromObjectArr[i];
+    }
+  } 
 
-  const foxButton = document.getElementById('fox-year')
-      foxButton.addEventListener("click", function(){
-        document.getElementById('fox-year').innerText = "Year: " + movieData["Fantastic Mr. Fox"].year
-      })
-      foxButton.addEventListener("dblclick", function(){
-        document.getElementById('fox-year').innerText = "Cast: " + movieData["Fantastic Mr. Fox"].cast
-      })
-      
-  const budapestButton = document.getElementById('budapest-year')
-      budapestButton.addEventListener("click", function(){
-        document.getElementById('budapest-year').innerText = "Year: " + movieData["The Grand Budapest Hotel"].year
-      })
-      budapestButton.addEventListener("dblclick", function(){
-        document.getElementById('budapest-year').innerText = "Cast: " + movieData["The Grand Budapest Hotel"].cast
-      })
+  const castFromObjectArr = [movieData["The Darjeeling Limited"].cast, movieData["The Royal Tenenbaums"].cast, movieData["Fantastic Mr. Fox"].cast, movieData["The Grand Budapest Hotel"].cast];
+
+  function displayCast (){
+    for(let i = 0; i < buttonList.length; i++) {
+      buttonList[i].innerText = castFromObjectArr[i];
+    }  
+  }
+
 
 // END
 
