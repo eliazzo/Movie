@@ -3,18 +3,53 @@
     <head>
         <meta charset="UTF-8">
         <script src = "movie.js" defer></script> <!--loads html before applying js-->
-        <link rel = "stylesheet" href="movie.css">
+        <link rel="stylesheet" href="movie.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
     </head>
 
-    <body>
+    <body class="flex-column">
+   <!-- Navbar -->
+        <ul id="navbar" class="flex-row">
+            <li class="space-l"><a href="#navbar">Home</a></li>
+            <li class="space-l"><a href="#gallery">Movies</a></li>
+            <li class="space-l"><a href="#film-rating-form">Form</a></li>
+        </ul>
 
-        <div class ="name-list max-viewport-h">
-             <ul id="movie-name-list" style="list-style: none;">
-             </ul>
+    <!-- Wes image -->
+        <img src="/Img/Wes.jpg" alt="Wes Anderson portrait" class="stack-l double-margin ">
+    
+    <!-- Gallery -->
+    
+<div class="blue-box stack-xl double-margin">
+    <h2 class="stack-l space-l font-l">How it works</h2>
+    <div class="line-1"></div>
+
+    <section class="flex-row">
+        <div class="card">
+            <p class="font-xl">&#9728</p>
+            <p class="stack-l font-m double-margin">Hover over the movie poster to reveal information</p>
+            </div>
+        <div class="card box-shadow">
+            <p class="font-xl">&#9733</p>
+            <p class="stack-l font-m double-margin">Click the buttons for more information</p>
         </div>
+        <div class="card double-margin">
+            <p class="font-xl">&#9881</p>
+            <p class="stack-l font-m double-margin">Add your rating to the poster using the form down below</p>
+            </div>
+    </section>
 
-     <div class ="gallery max-viewport-h">
+    <h2 class="stack-xl space-l font-l">Movie Gallery</h2>
+    <div class="line-1"></div>
 
+     <div id="gallery"
+        class=
+            "gallery 
+            flex-row 
+            max-viewport-h 
+            double-margin 
+            stack-xl">
         <div class="wrapper">
             <div class="darjeeling-image">
                 <img id ="Darjeeling" src = "/Img/darjeeling.jpg" width="300px">
@@ -93,17 +128,23 @@
                 >The Grand Budapest Hotel</button>
             </div>
         </div>
-        
-     </div>
+</div>
 
-    <form class="max-viewport-h" id="film-rating-form" onsubmit="addUserRating(event)">
-        <p>Add your movie rating to the poster</p>
+    <form class="stack-xl flex-column" id="film-rating-form" onsubmit="addUserRating(event)">
+        <h2>Add your movie rating to the poster</h2>
+        <div class="line-1"></div>
         <label for="films"></label> 
         <select name="films" id="movie-dropdown">
         </select>
         <input id="user-rating" type="number" min="0" max="10" step="0.1" placeholder="Type your movie rating here">
         <input id="user-rating-submit" type="submit" value="Submit">        
     </form>
+
+
+    <div class ="name-list max-viewport-h">
+        <ul id="movie-name-list" style="list-style: none;">
+        </ul>
+   </div>
         
     </body>
 </html>
