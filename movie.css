@@ -1,10 +1,98 @@
 
+html {
+    scroll-behavior: smooth;
+}
+  
+body {
+    font-family: "poppins";
+    max-width: 100%;
+}
+#navbar {
+    list-style-type: none;
+    font-size: 2rem;
+}
+
+a:link { 
+    text-decoration: none; 
+}
+
+.blue-box {
+    background-color: #ecf9fe;
+    height: 100vh;
+    margin-top: -150px;
+}
+
+.card {
+    height: 20rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-align: center
+}
+
+.box-shadow {
+    box-shadow: 20px 20px 5px rgba(128, 128, 128, 0.503);
+}
+
+
+/* CSS Primitives */
+
+.line-1 {
+    height: 1px;
+    background: #74D1EA;
+    width: 40%;
+    }
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Vertical spacing */
+
+.stack-xl {
+    margin-top: 60px;
+}
+
+.stack-l {
+    margin-top: 30px;
+}
+
+/* Horizontal spacing */
+
+.double-margin {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.space-l {
+    margin-left: 20px;
+}
+
+/* Font size */
+
+.font-xl {
+    font-size: 3rem;
+}
+
+.font-l {
+    font-size: 2rem;
+}
+
+.font-m {
+    font-size: 1rem;
+}
+
 .name-list{
     display: flex;
     flex-wrap: wrap;
     /* text-align: center; */
     width: auto;
-    font-family: sans-serif;
+
     font-weight: bold;
     font-size: 75px;
     letter-spacing: 2px;
@@ -18,16 +106,9 @@
 
 
 .gallery{
-    padding-top: 20px;
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    font-family: sans-serif;
-    letter-spacing: 2px;
-    color: white;
-
+    gap: 30px;  
 }
 
 .gallery img{
@@ -69,17 +150,12 @@
 
 
 button{
-    border: 10px;
+    font-family: "poppins";
     height: 100px;
-    width: 100%;
-    letter-spacing: 2px;
     font-size: 20px;
-    font-weight: bold;
-    color: white;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 10%;
     border-radius: 5px;
-    background-color: #FF5733;
+
 }
 
 button:hover{
@@ -87,7 +163,7 @@ button:hover{
 }
 
 #film-rating-form p{
-    font-family: sans-serif;
+
     font-weight: bold;
     font-size: 35px;
     letter-spacing: 2px;
@@ -111,13 +187,9 @@ button:hover{
 }
 
 #movie-dropdown, #user-rating, #user-rating-submit{
-    font-family: sans-serif;
-    font-weight: bold;
-    color: white;
     width: 300px;
-    border: none;
+    border: 1px solid black;
     font-size: 20px;
-    background-color: #FF5733;
     height: 50px;
     border-radius: 5px;
 }
