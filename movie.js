@@ -48,12 +48,14 @@ let movieData = { // object made up of 4 keys and 4 values
   const movieNamesArray = Object.keys(movieData); // returns the four movie name keys of the movieData object as an array
 
   const movieDropdown = document.getElementById("movie-dropdown")
-  // const movieDropdown = document.querySelectorAll("[name=films]") 
+  // const movieDropdown = document.querySelectorAll("[name=films]") // This was commented out
+
+  // Transferring HTML list to dropdown
 
   for (let i = 0; i < movieNamesArray.length; i++){
-    const listItem = document.createElement("li"); 
-    listItem.textContent = movieNamesArray[i];
-    movieNameList.appendChild(listItem);
+    // const listItem = document.createElement("li"); 
+    // listItem.textContent = movieNamesArray[i];
+    // movieNameList.appendChild(listItem);
 
     const optionItem = document.createElement("option");
     optionItem.textContent = movieNamesArray[i];
@@ -100,83 +102,76 @@ function buttonTextOriginal(){
       const chosenFilm = movieDropdown.value // selects the chosen film (the key name string e.g., "The Grand Budapest Hotel") from the dropdown list
       movieData[chosenFilm].userRating = userRating // sets the userRating variable equal to the userRating property of the key e.g., "The Grand Budapest Hotel" {userRating:}
 
-      for (let i = 0; i < movieNamesArray; i++) {
-        if (chosenFilm === movieNamesArray[i]){
-          console.log(userRating)
-        }
+      // for (let i = 0; i < ratingElementList; i++) {
+      //   if (ratingElementList[i] === chosenFilm[i]){
+      //     console.log(userRating)
+      //     ratingElementList[i].innerText = "My rating: " +  "hello";
+      //   }
+      // } Trying to replace lines 110-124 with more concise code
+      
+      if(chosenFilm === "The Darjeeling Limited"){
+        darjeelingRatingElement.innerText = "My rating: " + userRating;
+      }
+
+      if(chosenFilm === "The Royal Tenenbaums"){
+        royalRatingElement.innerText = "My rating: " + userRating;
+      }
+
+      if(chosenFilm === "Fantastic Mr. Fox"){
+        foxRatingElement.innerText = "My rating: " + userRating;
       }
       
-      // if(chosenFilm === "The Darjeeling Limited"){
-      //   darjeelingRatingElement.innerText = "My rating: " + userRating;
-      // }
-
-      // if(chosenFilm === "The Royal Tenenbaums"){
-      //   royalRatingElement.innerText = "My rating: " + userRating;
-      // }
-
-      // if(chosenFilm === "Fantastic Mr. Fox"){
-      //   foxRatingElement.innerText = "My rating: " + userRating;
-      // }
-      
-      // if (chosenFilm === "The Grand Budapest Hotel") {
-      //   budapestRatingElement.innerText = "My rating: " + userRating;
-      // }
+      if (chosenFilm === "The Grand Budapest Hotel") {
+        budapestRatingElement.innerText = "My rating: " + userRating;
+      }
      
       
 
   }
   
   // Plot text on hover
-
-  const plotFromObjectArr = [movieData["The Darjeeling Limited"].plot,  movieData["The Royal Tenenbaums"].plot, movieData["Fantastic Mr. Fox"].plot,movieData["The Grand Budapest Hotel"].plot];
-  for (let i=0; i<plotFromObjectArr.length; i++){ // Iterates through Object movie plot information
-
+  let plotArr = Object.values(movieData).map(movie => movie.plot);
   const plotList = document.querySelectorAll(".movie-plot");
-  for (let i=0; i<plotList.length; i++){ // Iterates through .movie-plot elements
-    plotList[i].innerText = "Plot: " + plotFromObjectArr[i]; // Applies "Plot: " + Object movie plot information to the elements inner text
+  for (let i = 0; i < plotList.length; i++){ // Iterates through .movie-plot elements
+    plotList[i].innerText = "Plot: " + plotArr[i]; // Applies "Plot: " + Object movie plot information to the elements inner text
   }
-}
 
   // Movie rating on hover
-  
-const ratingFromObjectArr = [movieData["The Darjeeling Limited"].rating, movieData["The Royal Tenenbaums"].rating, movieData["Fantastic Mr. Fox"].rating, movieData["The Grand Budapest Hotel"].rating];
-const ratingList = document.querySelectorAll(".rating");
-for (let i = 0; i < ratingList.length; i++){
-  ratingList[i].innerText = "IMDB rating: " + ratingFromObjectArr[i];
-}
+  let ratingArr = Object.values(movieData).map(movie => movie.rating);
+  const ratingList = document.querySelectorAll(".rating");
+  for (let i = 0; i < ratingList.length; i++){
+    ratingList[i].innerText = "IMDB rating: " + ratingArr[i];
+  }
 
 
 
-//Buttons to reveal year "click" and cast "dblclick"
+//Reveal year on "click" 
 
-  
-  const yearFromObjectArr = [movieData["The Darjeeling Limited"].year, movieData["The Royal Tenenbaums"].year, movieData["Fantastic Mr. Fox"].year, movieData["The Grand Budapest Hotel"].year]
+  let years = Object.values(movieData).map(movie => movie.year);
 
   function displayYear(){
     for (let i = 0; i < buttonList.length; i ++) {
-      buttonList[i].innerText = yearFromObjectArr[i];
+      buttonList[i].innerText = years[i];
     }
   } 
 
-  const castFromObjectArr = [movieData["The Darjeeling Limited"].cast, movieData["The Royal Tenenbaums"].cast, movieData["Fantastic Mr. Fox"].cast, movieData["The Grand Budapest Hotel"].cast];
+// Reveal cast on "dblclick"
+  let castArr = Object.values(movieData).map(movie => movie.cast);
 
+  console.log(castArr)
   function displayCast (){
     for(let i = 0; i < buttonList.length; i++) {
-      buttonList[i].innerText = castFromObjectArr[i];
+      buttonList[i].innerText = castArr[i];
     }  
   }
 
+// Call functions
+  for (let i = 0; i < buttonList.length; i ++) {
+    buttonList[i].addEventListener("click", displayYear);
+  }
 
-
-
-
-
-
-
-
-
-
-  
-
+  for (let i = 0; i < buttonList.length; i ++) {
+  buttonList[i].addEventListener('dblclick', displayCast())
+  }
 
 
