@@ -17,11 +17,11 @@
         </ul>
 
     <!-- Wes image -->
-        <img src="/Img/Wes.jpg" alt="Wes Anderson portrait" class="stack-l double-margin ">
+        <img src="Img/Wes.jpg" alt="Wes Anderson portrait" class="stack-l double-margin ">
     
-    <!-- Gallery -->
+    <!-- How it works -->
     
-<div class="blue-box stack-xl double-margin">
+    <div class="blue-box stack-xl double-margin">
     <h2 class="stack-l space-l font-l">How it works</h2>
     <div class="line-1"></div>
 
@@ -40,7 +40,10 @@
             </div>
     </section>
 
+<!-- Gallery -->
+
     <h2 class="stack-xl space-l font-l">Movie Gallery</h2>
+    
     <div class="line-1"></div>
 
      <div id="gallery"
@@ -50,9 +53,10 @@
             max-viewport-h 
             double-margin 
             stack-xl">
+        
         <div class="wrapper">
             <div class="darjeeling-image">
-                <img id ="Darjeeling" src = "/Img/darjeeling.jpg" width="300px">
+                <img id ="Darjeeling" src = "Img/darjeeling.jpg" width="300px">
                     <div id="text-box" class="text-box">
                         <p id="darjeeling-name"></p>
                         <p id = "darjeeling-plot" class="movie-plot"></p>
@@ -65,14 +69,15 @@
                     onmouseout="buttonTextOriginal()"
                     onclick="displayYear()"
                     ondblclick="displayCast()"
-                >The Darjeeling Limited</button>
+                >The Darjeeling Limited
+                </button>
             </div> 
         </div>
 
 
         <div class="wrapper">
             <div class="royal-image">
-                <img id="Royal" src = "/Img/tenenbaums.jpg" width="300" >
+                <img id="Royal" src = "Img/tenenbaums.jpg" width="300" >
                     <div id="text-box" class="text-box">
                         <p id="royal-name"></p>
                          <p id = "royal-plot" class="movie-plot"></p>
@@ -128,7 +133,7 @@
                 >The Grand Budapest Hotel</button>
             </div>
         </div>
-</div>
+
 
     <form class="stack-xl flex-column" id="film-rating-form" onsubmit="addUserRating(event)">
         <h2>Add your movie rating to the poster</h2>
@@ -141,10 +146,11 @@
     </form>
 
 
-    <div class ="name-list max-viewport-h">
-        <ul id="movie-name-list" style="list-style: none;">
-        </ul>
-   </div>
+    <!-- <div class ="name-list max-viewport-h">
+        <ul id="movie-name-list" style="list-style: none;"></ul>
+   </div> -->
+
+</div>
         
     </body>
 </html>
