@@ -48,12 +48,14 @@ let movieData = { // object made up of 4 keys and 4 values
   const movieNamesArray = Object.keys(movieData); // returns the four movie name keys of the movieData object as an array
 
   const movieDropdown = document.getElementById("movie-dropdown")
-  // const movieDropdown = document.querySelectorAll("[name=films]") 
+  // const movieDropdown = document.querySelectorAll("[name=films]") // This was commented out
+
+  // Transferring HTML list to dropdown
 
   for (let i = 0; i < movieNamesArray.length; i++){
-    const listItem = document.createElement("li"); 
-    listItem.textContent = movieNamesArray[i];
-    movieNameList.appendChild(listItem);
+    // const listItem = document.createElement("li"); 
+    // listItem.textContent = movieNamesArray[i];
+    // movieNameList.appendChild(listItem);
 
     const optionItem = document.createElement("option");
     optionItem.textContent = movieNamesArray[i];
@@ -100,27 +102,28 @@ function buttonTextOriginal(){
       const chosenFilm = movieDropdown.value // selects the chosen film (the key name string e.g., "The Grand Budapest Hotel") from the dropdown list
       movieData[chosenFilm].userRating = userRating // sets the userRating variable equal to the userRating property of the key e.g., "The Grand Budapest Hotel" {userRating:}
 
-      for (let i = 0; i < movieNamesArray; i++) {
-        if (chosenFilm === movieNamesArray[i]){
-          console.log(userRating)
-        }
+      // for (let i = 0; i < ratingElementList; i++) {
+      //   if (ratingElementList[i] === chosenFilm[i]){
+      //     console.log(userRating)
+      //     ratingElementList[i].innerText = "My rating: " +  "hello";
+      //   }
+      // } Trying to replace lines 110-124 with more concise code
+      
+      if(chosenFilm === "The Darjeeling Limited"){
+        darjeelingRatingElement.innerText = "My rating: " + userRating;
+      }
+
+      if(chosenFilm === "The Royal Tenenbaums"){
+        royalRatingElement.innerText = "My rating: " + userRating;
+      }
+
+      if(chosenFilm === "Fantastic Mr. Fox"){
+        foxRatingElement.innerText = "My rating: " + userRating;
       }
       
-      // if(chosenFilm === "The Darjeeling Limited"){
-      //   darjeelingRatingElement.innerText = "My rating: " + userRating;
-      // }
-
-      // if(chosenFilm === "The Royal Tenenbaums"){
-      //   royalRatingElement.innerText = "My rating: " + userRating;
-      // }
-
-      // if(chosenFilm === "Fantastic Mr. Fox"){
-      //   foxRatingElement.innerText = "My rating: " + userRating;
-      // }
-      
-      // if (chosenFilm === "The Grand Budapest Hotel") {
-      //   budapestRatingElement.innerText = "My rating: " + userRating;
-      // }
+      if (chosenFilm === "The Grand Budapest Hotel") {
+        budapestRatingElement.innerText = "My rating: " + userRating;
+      }
      
       
 
