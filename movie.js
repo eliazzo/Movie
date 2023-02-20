@@ -150,36 +150,33 @@ for (let i = 0; i < ratingList.length; i++){
 
 
 
-//Buttons to reveal year "click" and cast "dblclick"
+//Reveal year on "click" 
 
-  
-  const yearFromObjectArr = [movieData["The Darjeeling Limited"].year, movieData["The Royal Tenenbaums"].year, movieData["Fantastic Mr. Fox"].year, movieData["The Grand Budapest Hotel"].year]
+  let years = Object.values(movieData).map(movie => movie.year);
 
   function displayYear(){
     for (let i = 0; i < buttonList.length; i ++) {
-      buttonList[i].innerText = yearFromObjectArr[i];
+      buttonList[i].innerText = years[i];
     }
   } 
 
-  const castFromObjectArr = [movieData["The Darjeeling Limited"].cast, movieData["The Royal Tenenbaums"].cast, movieData["Fantastic Mr. Fox"].cast, movieData["The Grand Budapest Hotel"].cast];
+// Reveal cast on "dblclick"
+  let castArr = Object.values(movieData).map(movie => movie.cast);
 
+  console.log(castArr)
   function displayCast (){
     for(let i = 0; i < buttonList.length; i++) {
-      buttonList[i].innerText = castFromObjectArr[i];
+      buttonList[i].innerText = castArr[i];
     }  
   }
 
+// Call functions
+  for (let i = 0; i < buttonList.length; i ++) {
+    buttonList[i].addEventListener("click", displayYear);
+  }
 
-
-
-
-
-
-
-
-
-
-  
-
+  for (let i = 0; i < buttonList.length; i ++) {
+  buttonList[i].addEventListener('dblclick', displayCast())
+  }
 
 
