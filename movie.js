@@ -95,32 +95,36 @@ function buttonTextOriginal(){
 
   function addUserRating(event){ // event is an object that contains the html properties about the user event (form submit event)
       console.log(event);
-      event.preventDefault(); // default form behaviour is to refresh the page when the form is submitted // calls the preventDefault method on the submit event
+      event.preventDefault(); // prevents default form behaviour is to refresh the page when the form is submitted // calls preventDefault method on the submit event
       const userRating = document.getElementById("user-rating").value; // sets userRating variable to the user's rating
       const chosenFilm = movieDropdown.value // selects the chosen film (the key name string e.g., "The Grand Budapest Hotel") from the dropdown list
       movieData[chosenFilm].userRating = userRating // sets the userRating variable equal to the userRating property of the key e.g., "The Grand Budapest Hotel" {userRating:}
 
-      if(chosenFilm === "The Darjeeling Limited"){
-        darjeelingRatingElement.innerText = "My rating: " + userRating;
-      }
-
-      if(chosenFilm === "The Royal Tenenbaums"){
-        royalRatingElement.innerText = "My rating: " + userRating;
-      }
-
-      if(chosenFilm === "Fantastic Mr. Fox"){
-        foxRatingElement.innerText = "My rating: " + userRating;
+      for (let i = 0; i < movieNamesArray; i++) {
+        if (chosenFilm === movieNamesArray[i]){
+          console.log(userRating)
+        }
       }
       
-      if (chosenFilm === "The Grand Budapest Hotel") {
-        budapestRatingElement.innerText = "My rating: " + userRating;
-      }
+      // if(chosenFilm === "The Darjeeling Limited"){
+      //   darjeelingRatingElement.innerText = "My rating: " + userRating;
+      // }
+
+      // if(chosenFilm === "The Royal Tenenbaums"){
+      //   royalRatingElement.innerText = "My rating: " + userRating;
+      // }
+
+      // if(chosenFilm === "Fantastic Mr. Fox"){
+      //   foxRatingElement.innerText = "My rating: " + userRating;
+      // }
+      
+      // if (chosenFilm === "The Grand Budapest Hotel") {
+      //   budapestRatingElement.innerText = "My rating: " + userRating;
+      // }
      
       
 
   }
-
-  // Working with the movieData object - 
   
   // Plot text on hover
 
@@ -143,7 +147,7 @@ for (let i = 0; i < ratingList.length; i++){
 
 
 
-  //Buttons to reveal year "click" and cast "dblclick"
+//Buttons to reveal year "click" and cast "dblclick"
 
   
   const yearFromObjectArr = [movieData["The Darjeeling Limited"].year, movieData["The Royal Tenenbaums"].year, movieData["Fantastic Mr. Fox"].year, movieData["The Grand Budapest Hotel"].year]
@@ -163,7 +167,6 @@ for (let i = 0; i < ratingList.length; i++){
   }
 
 
-// END
 
 
 
