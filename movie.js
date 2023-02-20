@@ -130,23 +130,18 @@ function buttonTextOriginal(){
   }
   
   // Plot text on hover
-
-  const plotFromObjectArr = [movieData["The Darjeeling Limited"].plot,  movieData["The Royal Tenenbaums"].plot, movieData["Fantastic Mr. Fox"].plot,movieData["The Grand Budapest Hotel"].plot];
-  for (let i=0; i<plotFromObjectArr.length; i++){ // Iterates through Object movie plot information
-
+  let plotArr = Object.values(movieData).map(movie => movie.plot);
   const plotList = document.querySelectorAll(".movie-plot");
-  for (let i=0; i<plotList.length; i++){ // Iterates through .movie-plot elements
-    plotList[i].innerText = "Plot: " + plotFromObjectArr[i]; // Applies "Plot: " + Object movie plot information to the elements inner text
+  for (let i = 0; i < plotList.length; i++){ // Iterates through .movie-plot elements
+    plotList[i].innerText = "Plot: " + plotArr[i]; // Applies "Plot: " + Object movie plot information to the elements inner text
   }
-}
 
   // Movie rating on hover
-  
-const ratingFromObjectArr = [movieData["The Darjeeling Limited"].rating, movieData["The Royal Tenenbaums"].rating, movieData["Fantastic Mr. Fox"].rating, movieData["The Grand Budapest Hotel"].rating];
-const ratingList = document.querySelectorAll(".rating");
-for (let i = 0; i < ratingList.length; i++){
-  ratingList[i].innerText = "IMDB rating: " + ratingFromObjectArr[i];
-}
+  let ratingArr = Object.values(movieData).map(movie => movie.rating);
+  const ratingList = document.querySelectorAll(".rating");
+  for (let i = 0; i < ratingList.length; i++){
+    ratingList[i].innerText = "IMDB rating: " + ratingArr[i];
+  }
 
 
 
