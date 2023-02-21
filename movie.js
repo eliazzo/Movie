@@ -65,16 +65,7 @@ let movieData = { // object made up of 4 keys and 4 values
   }
 
 
-// Set buttons to display movie names
 
-// Revert to original button text
-const buttonList = document.querySelectorAll(".button-text");
-
-function buttonTextOriginal(){
-  for(let i = 0; i < buttonList.length; i++){
-      buttonList[i].innerHTML = Object.keys(movieData)[i];
-}
-}
 
 
 
@@ -145,33 +136,42 @@ function buttonTextOriginal(){
 
 
 
+// Set buttons to display movie names
+
+// Revert to original button text
+const buttonList = document.querySelectorAll(".button-text");
+console.log(buttonList)
+
+function buttonTextOriginal(){
+  for(let i = 0; i < buttonList.length; i++){
+      buttonList[i].innerHTML = Object.keys(movieData)[i];
+}
+}
+
 //Reveal year on "click" 
 
   let years = Object.values(movieData).map(movie => movie.year);
 
-  function displayYear(){
-    for (let i = 0; i < buttonList.length; i ++) {
-      buttonList[i].innerText = years[i];
-    }
-  } 
+  function displayYear(index) {
+    buttonList[index].innerText = years[index];
+  }
 
 // Reveal cast on "dblclick"
   let castArr = Object.values(movieData).map(movie => movie.cast);
 
-  console.log(castArr)
-  function displayCast (){
-    for(let i = 0; i < buttonList.length; i++) {
-      buttonList[i].innerText = castArr[i];
-    }  
+  function displayCast(index){
+    buttonList[index].innerText = castArr[index];
   }
 
 // Call functions
-  for (let i = 0; i < buttonList.length; i ++) {
-    buttonList[i].addEventListener("click", displayYear);
-  }
+  buttonList.forEach((button, i) => {
+    button.addEventListener('click', () => {
+      displayYear(i);
+    });
+    button.addEventListener('dblclick', () => {
+      displayCast(i);
+    })
+  });
 
-  for (let i = 0; i < buttonList.length; i ++) {
-  buttonList[i].addEventListener('dblclick', displayCast())
-  }
 
 
