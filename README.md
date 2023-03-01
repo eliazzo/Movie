@@ -13,10 +13,8 @@ My latest version of the UI has been designed using a *mobile first* approach:
 ![screenshot](/README-images/3rd%20Screenshot%202023-03-01.png)
 
 An earlier version:
-<img src="movieNames.png" width="300" alt="movie names"/>
-<img src="TenenbaumsHover.png" width="300" alt="Tenenbaums hover"/>
-
-
+![old movie](/README-images/movieNames.png)
+![old Ten](/README-images/TenenbaumsHover.png)
 
 ## Developing the user interface
 
@@ -27,9 +25,8 @@ Users can hover their mouse over the movie posters to reveal information manipul
 
 ### AddUserRating()
 Users can input their own rating using the form. On submit, this information becomes visible on the chosen movie poster. Users can edit all the posters.
-<img src="form.png" width="300" alt="form screenshot"/>
-<img src="FoxUserRating.png" width="300" alt="fox user edit"/>
-
+![form screenshot](/README-images/form.png)
+![fox user](/README-images/FoxUserRating.png)
 
 ### Information buttons
 Users can click on buttons to reveal additional information, currently, the year and the cast.
