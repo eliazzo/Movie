@@ -1,81 +1,74 @@
 <!DOCTYPE html>
 <html lang = "en">
-    <head>
-        <meta charset="UTF-8">
-        <script src = "movie.js" defer></script> <!--loads html before applying js-->
-        <script src ="testing.js" defer></script>
-        <link rel="stylesheet" href="movie.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<head>
+  <meta charset="UTF-8">
+  <script src="movieObject.js" defer></script>
+  <script src = "movie.js" defer></script> <!--defer loads html before applying js-->
+  <script src ="testing.js" defer></script>
+  <link rel="stylesheet" href="movie.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+</head>
 
-    </head>
+<body class="flex-column">
+<!-- Navbar -->
+  <ul id="navbar" class="flex-row">
+    <li class="space-l"><a href="#navbar">Home</a></li>
+    <li class="space-l"><a href="#gallery">Movies</a></li>
+    <li class="space-l"><a href="#film-rating-form">Form</a></li>
+  </ul>
 
-    <body class="flex-column">
-   <!-- Navbar -->
-        <ul id="navbar" class="flex-row">
-            <li class="space-l"><a href="#navbar">Home</a></li>
-            <li class="space-l"><a href="#gallery">Movies</a></li>
-            <li class="space-l"><a href="#film-rating-form">Form</a></li>
-        </ul>
-
-    <!-- Wes image -->
-        <img src="Img/Wes.jpg" alt="Wes Anderson portrait" class="stack-l double-margin ">
+<!-- Wes image -->
+  <img src="Img/Wes.jpg" alt="Wes Anderson portrait" class="stack-l double-margin ">
     
-    <!-- How it works -->
-    
-    <div class="blue-box stack-xl double-margin">
-    <h2 class="stack-l space-l font-l">How it works</h2>
-    <div class="line-1"></div>
+<!-- How it works -->
+  <div class="blue-box stack-xl double-margin">
+  <h2 class="stack-l space-l font-l">How it works</h2>
+  <div class="line-1"></div>
 
-    <section class="flex-row">
-        <div class="card">
-            <p class="font-xl">&#9728</p>
-            <p class="stack-l font-m double-margin">Hover over the movie poster to reveal information</p>
-            </div>
-        <div class="card box-shadow">
-            <p class="font-xl">&#9733</p>
-            <p class="stack-l font-m double-margin">Click the buttons for more information</p>
-        </div>
-        <div class="card double-margin">
-            <p class="font-xl">&#9881</p>
-            <p class="stack-l font-m double-margin">Add your rating to the poster using the form down below</p>
-            </div>
-    </section>
+  <section class="flex-row">
+    <div class="card">
+      <p class="font-xl">&#9728</p>
+      <p class="stack-l font-m double-margin">Hover over the movie poster to reveal information</p>
+  	</div>
+  	<div class="card box-shadow">
+    	<p class="font-xl">&#9733</p>
+    	<p class="stack-l font-m double-margin">Click the buttons for more information</p>
+  	</div>
+  	<div class="card double-margin">
+    	<p class="font-xl">&#9881</p>
+    	<p class="stack-l font-m double-margin">Add your rating to the poster using the form down below</p>
+  	</div>
+  </section>
 
 <!-- Gallery -->
-
-    <h2 class="stack-xl space-l font-l">Movie Gallery</h2>
-    
-    <div class="line-1"></div>
-
-     <div id="gallery"
+	<h2 class="stack-xl space-l font-l">Movie Gallery</h2>
+  <div class="line-1"></div>
+	<div id="gallery"
         class=
             "gallery 
             flex-row 
             double-margin 
             stack-xl">
+
+		<div id="output" class="wrapper">
+
+		</div>
         
-        <div class="wrapper">
-            <div class="darjeeling-image">
-                <img id ="Darjeeling" src = "Img/darjeeling.jpg" width="300px">
-                    <div id="text-box" class="text-box">
-                        <p id="darjeeling-name"></p>
-                        <p id = "darjeeling-plot" class="movie-plot"></p>
-                        <p id="darjeeling-rating" class="rating"></p>
-                        <p id="darjeeling-user-rating" class="user-rating"></p>
-                    </div>
-               
-                    <p id="darjeeling-button">&#9733</p>
-               
-                    <button 
-                    class="button-text" 
-                    id = "darjeeling-year" 
-                    onmouseout="buttonTextOriginal()"
-              
-          
-                >&#9733
-                </button>
-            </div> 
+    <div class="wrapper">
+      <div class="darjeeling-image">
+        <img id ="Darjeeling" src = "Img/darjeeling.jpg" width="300px">
+        <div id="text-box" class="text-box">
+          <p id="darjeeling-name"></p>
+          <p id = "darjeeling-plot" class="movie-plot"></p>
+          <p id="darjeeling-rating" class="rating"></p>
+          <p id="darjeeling-user-rating" class="user-rating"></p>
         </div>
+        <button 
+          class="button-text" 
+          id = "darjeeling-year" >&#9733
+				</button>
+      </div> 
+    </div>
 
 
         <div class="wrapper">
@@ -89,11 +82,7 @@
                     </div>
                 <button 
                     class="button-text" 
-                    id = "royal-year" 
-                    onmouseout="buttonTextOriginal()"
-                    
-              
-                >&#9733</button>
+                    id = "royal-year" >&#9733</button>
             </div>
         </div>
 
@@ -109,11 +98,7 @@
                     </div>
                 <button 
                     class="button-text" 
-                    id = "fox-year" 
-                    onmouseout="buttonTextOriginal()"
-                   
-                   
-                >&#9733</button>
+                    id = "fox-year"  >&#9733</button>
             </div>
         </div>
 
@@ -132,10 +117,7 @@
                     <button 
                     class="button-text" 
                     id = "budapest-year" 
-                    onmouseout="buttonTextOriginal()"
-            
-                   
-                >T&#9733</button>
+                     >T&#9733</button>
             </div>
         </div>
 
@@ -146,7 +128,7 @@
         <label for="films"></label> 
         <select name="films" id="movie-dropdown">
         </select>
-        <input id="user-rating" type="number" min="0" max="10" step="0.1" placeholder="Type your movie rating here">
+        <input id="input-rating" type="number" min="0" max="10" step="0.1" placeholder="Type your movie rating here">
         <input id="user-rating-submit" type="submit" value="Submit">        
     </form>
 
