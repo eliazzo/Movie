@@ -148,29 +148,21 @@ function buttonTextOriginal(){
 }
 }
 
-//Reveal year on "click" 
+//Reveal year and "cast" on "click" 
 
   let years = Object.values(movieData).map(movie => movie.year);
-
-  function displayYear(index) {
-    buttonList[index].innerText = years[index];
-  }
-
-// Reveal cast on "dblclick"
   let castArr = Object.values(movieData).map(movie => movie.cast);
-
-  function displayCast(index){
-    buttonList[index].innerText = castArr[index];
+  function displayYear(index) {
+    buttonList[index].innerText = "Year: " + years[index] + "\n Cast: " + castArr[index];
   }
+
+
 
 // Call functions
-  buttonList.forEach((button, i) => {
+buttonList.forEach((button, i) => {
     button.addEventListener('click', () => {
       displayYear(i);
     });
-    button.addEventListener('dblclick', () => {
-      displayCast(i);
-    })
   });
 
 
