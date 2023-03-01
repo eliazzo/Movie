@@ -1,152 +1,146 @@
-
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
-  
+
 body {
-    font-family: "poppins";
-    max-width: 100%;
+  font-family: "poppins";
+  max-width: 100%;
 }
 #navbar {
-    list-style-type: none;
-    font-size: 2rem;
+  list-style-type: none;
+  font-size: 2rem;
 }
 
-a:link { 
-    text-decoration: none; 
+a:link {
+  text-decoration: none;
 }
 
 .blue-box {
-    background-color: #ecf9fe;
-    margin-top: -150px;
+  background-color: #ecf9fe;
+  margin-top: -150px;
 }
 
 .card {
-    height: 20rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    text-align: center
+  height: 20rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  text-align: center;
 }
 
 .box-shadow {
-    box-shadow: 20px 20px 5px rgba(128, 128, 128, 0.503);
+  box-shadow: 20px 20px 5px rgba(128, 128, 128, 0.503);
 }
-
 
 /* CSS Primitives */
 
 .line-1 {
-    height: 1px;
-    background: #74D1EA;
-    width: 40%;
-    }
+  height: 1px;
+  background: #74d1ea;
+  width: 40%;
+}
 
 .flex-row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .flex-column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Vertical spacing */
 
 .stack-xl {
-    margin-top: 60px;
+  margin-top: 60px;
 }
 
 .stack-l {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 /* Horizontal spacing */
 
 .double-margin {
-    margin-left: 5%;
-    margin-right: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .space-l {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 /* Font size */
 
 .font-xl {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 .font-l {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .font-m {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
-.name-list{
-    display: flex;
-    flex-wrap: wrap;
-    /* text-align: center; */
-    width: auto;
+.name-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* text-align: center; */
+  width: auto;
 
-    font-weight: bold;
-    font-size: 75px;
-    letter-spacing: 2px;
-    color:hotpink;
-
+  font-weight: bold;
+  font-size: 75px;
+  letter-spacing: 2px;
+  color: hotpink;
 }
 
 .max-viewport-h {
-    height: 100vh;
+  height: 100vh;
 }
 
-
-.gallery{
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;  
+.gallery {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
-.gallery img{
-    display: flex;
-    justify-content: center;
-    height: 500px;
-    border-radius: 5px;
+.gallery img {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  border-radius: 5px;
 }
 
-
-.text-box{
-    position: absolute;
-    top: 150px;
-    background: rgba(64, 65, 64, 0.498);
-    z-index: -1;
-
+.text-box {
+  position: absolute;
+  top: 150px;
+  background: rgba(64, 65, 64, 0.498);
+  z-index: -1;
 }
 
-.wrapper{
-    position: relative;
-    display: flex;
+.wrapper {
+  position: relative;
+  display: flex;
 }
 
-
-.wrapper:hover .text-box{
-    position: absolute;
-    text-align: center;
-    z-index: 1;
+.wrapper:hover .text-box {
+  position: absolute;
+  text-align: center;
+  z-index: 1;
 }
 
-.gallery p{
-    width: 300px;
-
-} 
-
-#darjeeling-year, #royal-year, #fox-year, #budapest-year {
-    width: 300px;
+.gallery p {
+  width: 300px;
 }
 
+#darjeeling-year,
+#royal-year,
+#fox-year,
+#budapest-year {
+  width: 300px;
+}
 
 /* button{
     font-family: "poppins";
@@ -157,51 +151,47 @@ a:link {
 
 } */
 
-button:hover{
-    box-shadow: 0 0 4px 4px rgba(0, 140, 186, 0.5);
+button:hover {
+  box-shadow: 0 0 4px 4px rgba(0, 140, 186, 0.5);
 }
 
-#film-rating-form p{
-
-    font-weight: bold;
-    font-size: 35px;
-    letter-spacing: 2px;
-    color:hotpink;
+#film-rating-form p {
+  font-weight: bold;
+  font-size: 35px;
+  letter-spacing: 2px;
+  color: hotpink;
 }
 
-#film-rating-form{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 10px;
-    width: 80%;
-    justify-content: center;
-    margin: auto;
-    margin-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
-    border-radius: 5px;
-    align-items: center;
-
+#film-rating-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 10px;
+  width: 80%;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  border-radius: 5px;
+  align-items: center;
 }
 
-#movie-dropdown, #user-rating, #user-rating-submit{
-    width: 300px;
-    border: 1px solid black;
-    font-size: 20px;
-    height: 50px;
-    border-radius: 5px;
+#movie-dropdown,
+#input-rating,
+#user-rating-submit {
+  width: 300px;
+  border: 1px solid black;
+  font-size: 20px;
+  height: 50px;
+  border-radius: 5px;
 }
 
-#user-rating-submit:hover{
-    box-shadow: 0 0 4px 4px rgba(0, 140, 186, 0.5);
+#user-rating-submit:hover {
+  box-shadow: 0 0 4px 4px rgba(0, 140, 186, 0.5);
 }
 
-#user-rating::placeholder{
-    color: white;
-    font-size: small;
+#input-rating::placeholder {
+  color: rgb(189, 46, 46);
+  font-size: small;
 }
-
-
-
-
