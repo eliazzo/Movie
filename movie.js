@@ -54,6 +54,7 @@ for (let i = 0; i < ratingList.length; i++) {
 
 
 // Revert to movieName button text
+
 function buttonTextOriginal() {
   for (let i = 0; i < buttonList.length; i++) {
     buttonList[i].innerHTML = Object.keys(movieData)[i];
@@ -61,6 +62,8 @@ function buttonTextOriginal() {
 }
 
 //Reveal year and "cast" on "click"
+
+
 const displayYear = (index) => {
   buttonList[index].innerText =
     "Year: " + years[index] + "\n Cast: " + castArr[index];
@@ -112,7 +115,7 @@ ratingParagraph.innerText = "Rating: " + `${ratingArr[0]}`;
 const userRatingParagraph = document.createElement('p');
 userRatingParagraph.id = 'darjeeling-user-rating';
 userRatingParagraph.className = 'user-rating';
-userRatingParagraph.innerText = "User rating: ";
+userRatingParagraph.innerText = "User rating:";
 
 // append the paragraph elements to the text-box div
 textBoxDiv.appendChild(nameParagraph);
