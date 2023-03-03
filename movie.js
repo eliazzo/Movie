@@ -6,6 +6,11 @@ const ratingElementList = document.querySelectorAll(".user-rating");
 const buttonList = document.querySelectorAll(".button-text");
 const plotList = document.querySelectorAll(".movie-plot");
 const ratingList = document.querySelectorAll(".rating");
+const movieInfo = document.getElementById("dar-info");
+const movieInfoList = document.querySelectorAll(".info");
+
+console.log(movieInfoList)
+
 
 
 // Access object
@@ -14,6 +19,11 @@ let plotArr = Object.values(movieData).map((movie) => movie.plot);
 let years = Object.values(movieData).map((movie) => movie.year);
 let castArr = Object.values(movieData).map((movie) => movie.cast);
 let ratingArr = Object.values(movieData).map((movie) => movie.rating);
+
+let movieIndex = 0;
+movieInfo.innerText = movieNamesArray[movieIndex] + "\n Plot: " + plotArr[movieIndex] + "\n IMDB rating: " + ratingArr[movieIndex] + "\n My rating: ";
+
+
 
 // Transferring movieNamesArray to dropdown
 for (let i = 0; i < movieNamesArray.length; i++) {
@@ -82,25 +92,34 @@ buttonList.forEach((button, i) => {
 
 // Template
 
-if ('content' in document.createElement('template')){
-  const tname = document.getElementById("name");
-  const template = document.querySelector("#wrapper-template");
+// if ('content' in document.createElement('template')){
+//   const tname = document.getElementById("name");
+//   const template = document.querySelector("#wrapper-template");
 
-  const testName = "test name template";
-  tname.textContent = testName;
-}
+//   const testName = "test name template";
+//   tname.textContent = testName;
+// }
 
 // Dynamic poster
+for (let movie in movieData) {
+  console.log(`Movie: ${movie}`);
+  console.log(`Plot: ${movieData[movie].plot}`);
+  console.log(`Cast: ${movieData[movie].cast.join(', ')}`);
+  console.log(`Runtime: ${movieData[movie].runtime}`);
+  console.log(`Rating: ${movieData[movie].rating}`);
+  console.log(`User Rating: ${movieData[movie].userRating}`);
+  console.log(`Year: ${movieData[movie].year}`);
+}
 // create a darjeeling-image div
-const imageDiv = document.createElement('div');
-imageDiv.className = 'darjeeling-image';
+const poster = document.createElement('div');
+poster.className = 'darjeeling-image';
+poster.style.border = "solid 1px red" ;
+poster.style.height = '500px'
+poster.style.width = '300px';
 
 // create an image element and set its attributes
 const image = document.createElement('div');
-image.id = 'Darjeeling';
-image.style.border = "solid 1px red" ;
-image.style.height = '500px'
-image.style.width = '300px';
+
 
 // create a text-box div
 const textBoxDiv = document.createElement('div');
@@ -108,42 +127,29 @@ textBoxDiv.id = 'text-box';
 textBoxDiv.className = 'text-box';
 
 // create paragraph elements for name, plot, rating, and user rating
-const nameParagraph = document.createElement('p');
-nameParagraph.id = 'darjeeling-name';
-nameParagraph.innerText = `${movieNamesArray[0]}`;
-
-const plotParagraph = document.createElement('p');
-plotParagraph.id = 'darjeeling-plot';
-plotParagraph.className = 'movie-plot';
-plotParagraph.innerText = "Plot: " + `${plotArr[0]}`;
-
-const ratingParagraph = document.createElement('p');
-ratingParagraph.id = 'darjeeling-rating';
-ratingParagraph.className = 'rating';
-ratingParagraph.innerText = "Rating: " + `${ratingArr[0]}`;
-
-const userRatingParagraph = document.createElement('p');
-userRatingParagraph.id = 'darjeeling-user-rating';
-userRatingParagraph.className = 'user-rating';
-userRatingParagraph.innerText = "User rating:";
+const infoParagraph = document.createElement('p');
+infoParagraph.id = 'movie-info';
+infoParagraph.innerText = `${movieNamesArray[0]} \n` + "Plot: " + `${plotArr[0]}\n` + "Rating: " + `${ratingArr[0]}\n` + "User rating:";
 
 // append the paragraph elements to the text-box div
-textBoxDiv.appendChild(nameParagraph);
-textBoxDiv.appendChild(plotParagraph);
-textBoxDiv.appendChild(ratingParagraph);
-textBoxDiv.appendChild(userRatingParagraph);
+textBoxDiv.appendChild(infoParagraph);
 
 // create a button element and set its attributes
-const button = document.createElement('button');
-button.id = 'darjeeling-year';
-button.className = 'button-text';
-button.innerHTML = '&#9733';
+// const button = document.createElement('button');
+// button.id = 'movie-year';
+// button.className = 'button-text';
+// button.innerHTML = '&#9733';
 
 // append the image, text-box, and button elements to the darjeeling-image div
-imageDiv.appendChild(image);
-imageDiv.appendChild(textBoxDiv);
-imageDiv.appendChild(button);
+poster.appendChild(image);
+image.appendChild(textBoxDiv);
+// imageDiv.appendChild(button);
 
 // append the darjeeling-image div to the wrapper div
-const output = document.getElementById("output");
-output.appendChild(imageDiv);
+console.log(poster);
+
+const outputLocation = document.getElementById("movie-output");
+console.log(outputLocation);
+outputLocation.appendChild(poster);
+
+
