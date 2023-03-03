@@ -80,6 +80,16 @@ buttonList.forEach((button, i) => {
 });
 
 
+// Template
+
+if ('content' in document.createElement('template')){
+  const tname = document.getElementById("name");
+  const template = document.querySelector("#wrapper-template");
+
+  const testName = "test name template";
+  tname.textContent = testName;
+}
+
 // Dynamic poster
 // create a darjeeling-image div
 const imageDiv = document.createElement('div');
