@@ -101,38 +101,53 @@ buttonList.forEach((button, i) => {
 // }
 
 // Dynamic poster
-for (let movie in movieData) {
-  console.log(`Movie: ${movie}`);
-  console.log(`Plot: ${movieData[movie].plot}`);
-  console.log(`Cast: ${movieData[movie].cast.join(', ')}`);
-  console.log(`Runtime: ${movieData[movie].runtime}`);
-  console.log(`Rating: ${movieData[movie].rating}`);
-  console.log(`User Rating: ${movieData[movie].userRating}`);
-  console.log(`Year: ${movieData[movie].year}`);
-}
-// create a darjeeling-image div
-const poster = document.createElement('div');
-poster.className = 'darjeeling-image';
-poster.style.border = "solid 1px red" ;
-poster.style.height = '500px'
-poster.style.width = '300px';
+// for (let movie in movieData) {
+//   console.log(`Movie: ${movie}`);
+//   console.log(`Plot: ${movieData[movie].plot}`);
+//   console.log(`Cast: ${movieData[movie].cast.join(', ')}`);
+//   console.log(`Runtime: ${movieData[movie].runtime}`);
+//   console.log(`Rating: ${movieData[movie].rating}`);
+//   console.log(`User Rating: ${movieData[movie].userRating}`);
+//   console.log(`Year: ${movieData[movie].year}`);
+// }
 
-// create an image element and set its attributes
-const image = document.createElement('div');
 
+// create a template div
+function newPoster(num) {
+
+  console.log('newPoster')
+
+  const poster = document.createElement('div');
+  poster.style.border = "solid 1px red" ;
+  poster.style.height = '500px'
+  poster.style.width = '300px';
 
 // create a text-box div
-const textBoxDiv = document.createElement('div');
-textBoxDiv.id = 'text-box';
-textBoxDiv.className = 'text-box';
+  const textBoxDiv = document.createElement('div');
+  textBoxDiv.id = 'text-box';
+// textBoxDiv.className = 'text-box'; // add z index to text box to send to back
+  textBoxDiv.style.border = "solid 1px blue";
 
 // create paragraph elements for name, plot, rating, and user rating
-const infoParagraph = document.createElement('p');
-infoParagraph.id = 'movie-info';
-infoParagraph.innerText = `${movieNamesArray[0]} \n` + "Plot: " + `${plotArr[0]}\n` + "Rating: " + `${ratingArr[0]}\n` + "User rating:";
+  const infoParagraph = document.createElement('p');
+  infoParagraph.id = 'movie-info';
+  infoParagraph.innerText = `${movieNamesArray[num]} \n` + "Plot: " + `${plotArr[num]}\n` + "Rating: " + `${ratingArr[num]}\n` + "User rating:";
 
 // append the paragraph elements to the text-box div
 textBoxDiv.appendChild(infoParagraph);
+poster.appendChild(textBoxDiv);
+const gallery = document.getElementById("gallery");
+console.log(gallery)
+gallery.appendChild(poster)
+
+console.log(poster)
+
+}
+
+newPoster(0);
+newPoster(1);
+newPoster(2);
+newPoster(3);
 
 // create a button element and set its attributes
 // const button = document.createElement('button');
@@ -141,15 +156,15 @@ textBoxDiv.appendChild(infoParagraph);
 // button.innerHTML = '&#9733';
 
 // append the image, text-box, and button elements to the darjeeling-image div
-poster.appendChild(image);
-image.appendChild(textBoxDiv);
+// poster.appendChild(image);
+// image.appendChild(textBoxDiv);
 // imageDiv.appendChild(button);
 
 // append the darjeeling-image div to the wrapper div
-console.log(poster);
+// console.log(poster);
 
-const outputLocation = document.getElementById("movie-output");
-console.log(outputLocation);
-outputLocation.appendChild(poster);
+// const outputLocation = document.getElementById("movie-output");
+// console.log(outputLocation);
+// outputLocation.appendChild(poster);
 
 
